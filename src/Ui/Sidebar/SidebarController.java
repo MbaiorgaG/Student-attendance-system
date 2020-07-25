@@ -1,7 +1,7 @@
-package Sidebar;
+package Ui.Sidebar;
 
 import Classes.Teacher;
-import Login.LoginModel;
+import Ui.Login.LoginModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -66,12 +66,11 @@ public class SidebarController implements Initializable {
         dashboard.setStyle("-fx-background-color: #2980B9");
         // set the dashboard as default view when user logs in
         try {
-            loadPane("/Dashboard/Dashboard");
+            loadPane("/Ui/Dashboard/WelcomeDashboard");
         } catch (IOException e) {
             e.printStackTrace();
         }
-        String name = teacher.getName().split(" ")[0]; // get only the first word of the name
-        // set prefix based on gender.
+        String name = teacher.getName().split(" ")[0];
         if (teacher.getGender().equals("Male")) {
             UserName.setText("MR. " + name.toUpperCase());
         } else {
@@ -81,12 +80,10 @@ public class SidebarController implements Initializable {
 
     @FXML
     void changeView(MouseEvent event) throws IOException {
-        HBox source = (HBox) event.getSource(); // get the source reference
-        // so it wont have the coming hover like effects
+        HBox source = (HBox) event.getSource();
         source.setOnMouseEntered(null);
         source.setOnMouseExited(null);
         source.setStyle("-fx-background-color: #2980B9");
-        // clear the other Hboxes and style them again
         for (HBox item : buttons) {
             if (item != source) {
                 item.setStyle("-fx-background-color: #303952");
@@ -95,22 +92,21 @@ public class SidebarController implements Initializable {
             }
         }
         if (source == dashboard) {
-            loadPane("/Dashboard/Dashboard");
+            loadPane("/Ui/Dashboard/WelcomeDashboard");
         } else if (source == attend) {
-            loadPane("/Attendance/Attendance");
+            loadPane("/Ui/Attendance/Ui.Attendance");
         } else if (source == list) {
             loadPane("/List/List");
         } else if (source == aboutLec) {
-            loadPane("/AboutLecturer/AboutLecturer");
+            loadPane("/Ui/AboutLecturer/Ui.AboutLecturer");
         } else if (source == about) {
-            loadPane("/AboutApp/AboutApp");
+            loadPane("/Ui/AboutApp/Ui.AboutApp");
         } else if(source == settings){
-            loadPane("/Settings/Settings");
+            loadPane("/Ui/Settings/Ui.Settings");
         }
     }
 
 
-    // function to set the borderPane center to the passed fxml file
     private void loadPane(String UI) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(UI + ".fxml"));
         homePane.setCenter(root);
@@ -129,11 +125,11 @@ public class SidebarController implements Initializable {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == Yes) {
             // back to the main scene if user selected to logout
-            Parent Logout = FXMLLoader.load(getClass().getResource("/Login/Login.fxml"));
+            Parent Logout = FXMLLoader.load(getClass().getResource("/Ui/Login/Login.fxml"));
             Scene Login = new Scene(Logout);
             //This line gets the Stage information
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow(); // use the same stage again
-            window.setTitle("Login"); // set title
+            window.setTitle("Ui/Login"); // set title
             window.setScene(Login); // load login scene
             window.show(); // show window
         }

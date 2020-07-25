@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Settings.Settings">
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ui.Settings.Settings">
     <children>
         <HBox alignment="CENTER_LEFT" spacing="20.0">
             <children>
@@ -60,7 +60,7 @@
                         <Font size="18.0" />
                     </font>
                 </JFXButton>
-                <Label fx:id="saved" text="Settings saved!" visible="false">
+                <Label fx:id="saved" text="Ui.Settings saved!" visible="false">
                     <font>
                         <Font size="18.0" />
                     </font>

@@ -1,4 +1,4 @@
-package Login;
+package Ui.Login;
 
 import Classes.Teacher;
 import dbConnection.Connect;

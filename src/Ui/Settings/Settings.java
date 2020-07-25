@@ -1,4 +1,4 @@
-package Settings;
+package Ui.Settings;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;

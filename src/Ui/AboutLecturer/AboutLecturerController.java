@@ -1,7 +1,7 @@
-package AboutLecturer;
+package Ui.AboutLecturer;
 
 import Classes.Teacher;
-import Login.LoginModel;
+import Ui.Login.LoginModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;

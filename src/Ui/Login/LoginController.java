@@ -1,4 +1,4 @@
-package Login;
+package Ui.Login;
 
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -48,12 +48,12 @@ public class LoginController implements Initializable {
             System.out.println("Welcome back fam!!"); // some background action.
 //            Operations.loadPref(); // load settings
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("../Sidebar/Sidebar.fxml"));
+            loader.setLocation(getClass().getResource("../Ui.Sidebar/Ui.Sidebar.fxml"));
             Parent homeParent = loader.load();
             Scene home = new Scene(homeParent);
             //This line gets the Stage information
             Stage window = (Stage) logBtn.getScene().getWindow();
-            window.setTitle("Attendance System");
+            window.setTitle("Ui.Attendance System");
             window.setScene(home);
             window.show();
         } else {

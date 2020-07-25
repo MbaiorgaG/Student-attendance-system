@@ -1,8 +1,8 @@
-package Attendance;
+package Ui.Attendance;
 
 import Classes.Student;
 import Classes.Teacher;
-import Login.LoginModel;
+import Ui.Login.LoginModel;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;

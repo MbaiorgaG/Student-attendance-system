@@ -1,4 +1,4 @@
-package AboutApp;
+package Ui.AboutApp;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

@@ -1,7 +1,7 @@
-package Dashboard;
+package Ui.Dashboard;
 
 import Classes.Teacher;
-import Login.LoginModel;
+import Ui.Login.LoginModel;
 import dbConnection.Connect;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -41,19 +41,32 @@ public class DashboardController implements Initializable {
     @Override
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // this function right here is why i
-        // with my fully functioning brain love java now
-        // that doesn't make it less of a meme anyway
-        Welcome.setText("Welcome Back!"); // set the date label text
-        Welcome.setStyle("-fx-font-weight: Bold");
-        stud_num.setText(String.valueOf(getStudentsNum())); //set number of students label
-        classes_num.setText(String.valueOf(getClassesNum())); // set number of classes label
-        abs_num.setText(String.valueOf(getAbsentStudentsNum())); // set number of absent students in last class label
-        // calculate percentage for students attendance
-        double percent = 100 - (((double) getAbsentStudentsNum() / (double) getStudentsNum()) * 100);
-        atten_percent.setText(Math.round(percent) + "%"); // set attendance percentage label
-        barred_num.setText(String.valueOf(getBarredStudentsNum())); //  set number of barred students label
 
+        Welcome.setText("Welcome Back!");
+        Welcome.setStyle("-fx-font-weight: Bold");
+
+        if(String.valueOf(getStudentsNum()) != null){
+            stud_num.setText(String.valueOf(getStudentsNum()));
+        }
+
+        if(String.valueOf(getClassesNum()) != null){
+            classes_num.setText(String.valueOf(getClassesNum()));
+        }
+
+        if(String.valueOf(getAbsentStudentsNum()) != null){
+            abs_num.setText(String.valueOf(getAbsentStudentsNum()));
+        }
+
+        double percent = getPercent(getAbsentStudentsNum(),getStudentsNum());
+
+        atten_percent.setText(Math.round(percent) + "%");
+
+        barred_num.setText(String.valueOf(getBarredStudentsNum()));
+
+    }
+
+    private double getPercent(double absentStudentsNum, double studentsNum) {
+        return (100 - (absentStudentsNum/ studentsNum) * 100);
     }
 
     // get total number of students
@@ -62,24 +75,24 @@ public class DashboardController implements Initializable {
         ResultSet rs = null;
         try {
             rs = Objects.requireNonNull(conn).createStatement()
-                    .executeQuery(" select count(*) from '" + logged.getID() + "'"); // sql statement
-            return rs.getInt(1); // get the statement output
+                    .executeQuery(" select count(*) from '" + logged.getID() + "'");
+            return rs.getInt(1);
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally { // finally block runs regarding if the statement was successful, we already returned something or whatever
+        } finally {
             try {
                 Objects.requireNonNull(rs).close();
-                conn.close(); // make sure we close the connection
+                conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
-        return 0; //return 0 in case the try-catch block failed
+        return 0;
     }
 
     // get number of barred students
     private int getBarredStudentsNum() {
-        checkConn(); // check connection
+        checkConn();
         ResultSet rs = null;
         try {
             rs = Objects.requireNonNull(conn).createStatement()
@@ -90,17 +103,17 @@ public class DashboardController implements Initializable {
         } finally {
             try {
                 Objects.requireNonNull(rs).close();
-                conn.close(); // make sure we close the connection
+                conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
-        return 0; //return 0 in case the try-catch block failed
+        return 0;
     }
 
     // get number of absent students since last class
     private int getAbsentStudentsNum() {
-        checkConn(); // check connection
+        checkConn();
         ResultSet rs = null;
         try {
             rs = Objects.requireNonNull(conn).createStatement().

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="Dashboard.DashboardController">
+      fx:controller="Ui.Dashboard.DashboardController">
     <children>
         <Label fx:id="Welcome" alignment="CENTER" contentDisplay="CENTER" prefHeight="59.0" prefWidth="630.0"
                text="Current Stats" textAlignment="CENTER" VBox.vgrow="ALWAYS">
@@ -21,13 +21,13 @@
                     <children>
                         <HBox alignment="CENTER" prefHeight="120.0" style="-fx-background-color: #2980b9;"
                               styleClass="top_stats" stylesheets="@../StyleCheet/style.css">
-                            <children>
-                                <FontAwesomeIconView fill="#dddbdb" glyphName="SERVER" size="40" textAlignment="CENTER">
-                                    <HBox.margin>
-                                        <Insets/>
-                                    </HBox.margin>
-                                </FontAwesomeIconView>
-                            </children>
+<!--                            <children>-->
+<!--                                <FontAwesomeIconView fill="#dddbdb" glyphName="SERVER" size="40" textAlignment="CENTER">-->
+<!--                                    <HBox.margin>-->
+<!--                                        <Insets/>-->
+<!--                                    </HBox.margin>-->
+<!--                                </FontAwesomeIconView>-->
+<!--                            </children>-->
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="80.0" spacing="10.0" style="-fx-background-color: #303952;"
                               styleClass="bottom_stats">
@@ -59,12 +59,12 @@
                         <HBox alignment="CENTER" prefHeight="120.0" style="-fx-background-color: #2980b9;"
                               styleClass="top_stats" stylesheets="@../StyleCheet/style.css">
                             <children>
-                                <FontAwesomeIconView fill="#dddbdb" glyphName="BAR_CHART" size="40"
-                                                     textAlignment="CENTER">
-                                    <HBox.margin>
-                                        <Insets/>
-                                    </HBox.margin>
-                                </FontAwesomeIconView>
+<!--                                <FontAwesomeIconView fill="#dddbdb" glyphName="BAR_CHART" size="40"-->
+<!--                                                     textAlignment="CENTER">-->
+<!--                                    <HBox.margin>-->
+<!--                                        <Insets/>-->
+<!--                                    </HBox.margin>-->
+<!--                                </FontAwesomeIconView>-->
                             </children>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="80.0" spacing="10.0" style="-fx-background-color: #303952;"
@@ -95,14 +95,14 @@
                     <children>
                         <HBox alignment="CENTER" prefHeight="120.0" style="-fx-background-color: #2980b9;"
                               styleClass="top_stats" stylesheets="@../StyleCheet/style.css">
-                            <children>
-                                <FontAwesomeIconView fill="#dddbdb" glyphName="CALENDAR" size="40"
-                                                     textAlignment="CENTER">
-                                    <HBox.margin>
-                                        <Insets/>
-                                    </HBox.margin>
-                                </FontAwesomeIconView>
-                            </children>
+<!--                            <children>-->
+<!--                                <FontAwesomeIconView fill="#dddbdb" glyphName="CALENDAR" size="40"-->
+<!--                                                     textAlignment="CENTER">-->
+<!--                                    <HBox.margin>-->
+<!--                                        <Insets/>-->
+<!--                                    </HBox.margin>-->
+<!--                                </FontAwesomeIconView>-->
+<!--                            </children>-->
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="80.0" spacing="10.0" style="-fx-background-color: #303952;"
                               styleClass="bottom_stats">
@@ -139,13 +139,13 @@
                     <children>
                         <HBox alignment="CENTER" prefHeight="120.0" style="-fx-background-color: #2980b9;"
                               styleClass="top_stats" stylesheets="@../StyleCheet/style.css">
-                            <children>
-                                <FontAwesomeIconView fill="#dddbdb" glyphName="PHOTO" size="40" textAlignment="CENTER">
-                                    <HBox.margin>
-                                        <Insets/>
-                                    </HBox.margin>
-                                </FontAwesomeIconView>
-                            </children>
+<!--                            <children>-->
+<!--                                <FontAwesomeIconView fill="#dddbdb" glyphName="PHOTO" size="40" textAlignment="CENTER">-->
+<!--                                    <HBox.margin>-->
+<!--                                        <Insets/>-->
+<!--                                    </HBox.margin>-->
+<!--                                </FontAwesomeIconView>-->
+<!--                            </children>-->
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="80.0" spacing="5.0" style="-fx-background-color: #303952;"
                               styleClass="bottom_stats">
@@ -159,7 +159,7 @@
                                         <Insets/>
                                     </HBox.margin>
                                 </Label>
-                                <Label fx:id="stud_num13" prefHeight="23.0" prefWidth="107.0" text="Attendance"
+                                <Label fx:id="stud_num13" prefHeight="23.0" prefWidth="107.0" text="Ui.Attendance"
                                        textFill="#dddbdb">
                                     <font>
                                         <Font name="SF Compact Display Regular" size="18.0"/>
@@ -177,13 +177,13 @@
                     <children>
                         <HBox alignment="CENTER" prefHeight="120.0" style="-fx-background-color: #2980b9;"
                               styleClass="top_stats" stylesheets="@../StyleCheet/style.css">
-                            <children>
-                                <FontAwesomeIconView fill="#dddbdb" glyphName="EDIT" size="40" textAlignment="CENTER">
-                                    <HBox.margin>
-                                        <Insets/>
-                                    </HBox.margin>
-                                </FontAwesomeIconView>
-                            </children>
+<!--                            <children>-->
+<!--                                <FontAwesomeIconView fill="#dddbdb" glyphName="EDIT" size="40" textAlignment="CENTER">-->
+<!--                                    <HBox.margin>-->
+<!--                                        <Insets/>-->
+<!--                                    </HBox.margin>-->
+<!--                                </FontAwesomeIconView>-->
+<!--                            </children>-->
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="80.0" spacing="10.0" style="-fx-background-color: #303952;"
                               styleClass="bottom_stats">
