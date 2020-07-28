@@ -54,8 +54,8 @@ public class AboutLecturerController implements Initializable {
         exp.setText(teacher.getXP());
         number.setText(String.valueOf(teacher.getPhone()));
 
-        Image male = new Image("resources/male.png");
-        Image female = new Image("resources/female.png");
+        Image male = new Image("Ui/resources/male.png");
+        Image female = new Image("Ui/resources/female.png");
 
         if (teacher.getGender().startsWith("F") || teacher.getGender().startsWith("f")) {
             avatar.setImage((female));

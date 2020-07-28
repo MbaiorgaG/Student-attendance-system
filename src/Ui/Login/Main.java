@@ -22,7 +22,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/Ui/Login/Login.fxml"));
         primaryStage.setTitle("Ui/Login");
-        primaryStage.getIcons().add(new Image("resources/window.png")); // set window icon
+        primaryStage.getIcons().add(new Image("Ui/resources/window.png")); // set window icon
         primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
         displayDialog(primaryStage);

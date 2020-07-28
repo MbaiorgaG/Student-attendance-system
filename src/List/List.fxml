@@ -24,7 +24,7 @@
             <JFXComboBox fx:id="section" disable="true" layoutX="915.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="200.0" minWidth="200.0" onAction="#setClass" promptText="Section" />
             </children>
         </HBox>
-        <TableView fx:id="list_table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../StyleCheet/style.css" VBox.vgrow="ALWAYS">
+        <TableView fx:id="list_table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../Ui/StyleCheet/style.css" VBox.vgrow="ALWAYS">
             <columns>
                 <TableColumn fx:id="id_col" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="ID" />
                 <TableColumn fx:id="name_col" maxWidth="400.0" minWidth="250.0" onEditCommit="#updateCol" prefWidth="238.0" text="Name" />

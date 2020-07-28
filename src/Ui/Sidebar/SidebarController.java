@@ -64,7 +64,6 @@ public class SidebarController implements Initializable {
         Teacher teacher = LoginModel.getLogged(); // get logged in teacher from login model class
         logout.setFocusTraversable(false);
         dashboard.setStyle("-fx-background-color: #2980B9");
-        // set the dashboard as default view when user logs in
         try {
             loadPane("/Ui/Dashboard/WelcomeDashboard");
         } catch (IOException e) {
@@ -91,18 +90,18 @@ public class SidebarController implements Initializable {
                 item.setOnMouseExited(e -> item.setStyle("-fx-background-color: #303952"));
             }
         }
-        if (source == dashboard) {
+        if (source.getId() == dashboard.getId()) {
             loadPane("/Ui/Dashboard/WelcomeDashboard");
-        } else if (source == attend) {
-            loadPane("/Ui/Attendance/Ui.Attendance");
+        } else if (source.getId() == attend.getId()) {
+            loadPane("/Ui/Attendance/Attendance");
         } else if (source == list) {
             loadPane("/List/List");
         } else if (source == aboutLec) {
-            loadPane("/Ui/AboutLecturer/Ui.AboutLecturer");
+            loadPane("/Ui/AboutLecturer/AboutLecturer");
         } else if (source == about) {
-            loadPane("/Ui/AboutApp/Ui.AboutApp");
+            loadPane("/Ui/AboutApp/AboutApp");
         } else if(source == settings){
-            loadPane("/Ui/Settings/Ui.Settings");
+            loadPane("/Ui/Settings/Settings");
         }
     }
 
@@ -127,7 +126,6 @@ public class SidebarController implements Initializable {
             // back to the main scene if user selected to logout
             Parent Logout = FXMLLoader.load(getClass().getResource("/Ui/Login/Login.fxml"));
             Scene Login = new Scene(Logout);
-            //This line gets the Stage information
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow(); // use the same stage again
             window.setTitle("Ui/Login"); // set title
             window.setScene(Login); // load login scene

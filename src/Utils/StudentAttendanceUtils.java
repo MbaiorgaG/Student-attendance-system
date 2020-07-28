@@ -9,11 +9,9 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class StudentAttendanceUtils {
-    public static final String ICON_IMAGE_LOC = "/resources/window.png";
+    public static final String ICON_IMAGE_LOC = "/Ui/resources/window.png";
 
 
     public static Object loadWindow(URL loc, String title, Stage parentStage) {
