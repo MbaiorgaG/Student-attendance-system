@@ -18,11 +18,11 @@
             <children>
                 <VBox layoutX="15.0" layoutY="15.0" prefWidth="250.0" styleClass="stats" stylesheets="@../StyleCheet/style.css">
                     <children>
-                        <HBox fx:id="enroll_card" alignment="CENTER"  prefHeight="120.0" style="-fx-background-color: #2980b9;" styleClass="top_stats" stylesheets="@../StyleCheet/style.css">
+                        <HBox fx:id="enroll_card" alignment="CENTER" prefHeight="120.0" style="-fx-background-color: #2980b9;" styleClass="top_stats" stylesheets="@../StyleCheet/style.css">
                         </HBox>
                         <HBox fx:id="enroll_student" alignment="CENTER" prefHeight="80.0" spacing="10.0" style="-fx-background-color: #303952" styleClass="bottom_stats">
                      <children>
-                        <JFXButton onAction="#enrollStudent"  style="-fx-background-color: #303952" text="Enroll Student" textFill="#dddbdb">
+                        <JFXButton onAction="#enrollStudent" text="Enroll Student" textFill="#dddbdb">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -36,34 +36,28 @@
                         <HBox fx:id="vieiw_stu_card" alignment="CENTER" prefHeight="120.0" style="-fx-background-color: #2980b9;" styleClass="top_stats" stylesheets="@../StyleCheet/style.css">
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="80.0" spacing="10.0" style="-fx-background-color: #303952;" styleClass="bottom_stats">
-                            <children>
-                                <Label fx:id="view_student"  text="View Students" textFill="#dddbdb">
-                                    <font>
-                                        <Font name="SF Compact Display Regular" size="18.0" />
-                                    </font>
-                                    <HBox.margin>
-                                        <Insets />
-                                    </HBox.margin>
-                                </Label>
-                            </children>
+                     <children>
+                        <JFXButton fx:id="view_student" onAction="#ViewStudent" text="View Student" textFill="#dddbdb">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
                         </HBox>
                     </children>
                 </VBox>
                 <VBox layoutX="30.0" layoutY="15.0" prefWidth="250.0" style="-fx-border-radius: 100px;" styleClass="stats" stylesheets="@../StyleCheet/style.css">
                     <children>
-                        <HBox fx:id="start_attendance_card" alignment="CENTER"  prefHeight="120.0" style="-fx-background-color: #2980b9;" styleClass="top_stats" stylesheets="@../StyleCheet/style.css">
+                        <HBox fx:id="start_attendance_card" alignment="CENTER" prefHeight="120.0" style="-fx-background-color: #2980b9;" styleClass="top_stats" stylesheets="@../StyleCheet/style.css">
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="80.0" spacing="10.0" style="-fx-background-color: #303952;" styleClass="bottom_stats">
-                            <children>
-                                <Label fx:id="start_attendance"  text="Start Attendance" textFill="#dddbdb">
-                                    <font>
-                                        <Font name="SF Compact Display Regular" size="18.0" />
-                                    </font>
-                                    <HBox.margin>
-                                        <Insets />
-                                    </HBox.margin>
-                                </Label>
-                            </children>
+                     <children>
+                        <JFXButton fx:id="start_attendance" onAction="#startAttendance" text="Start Attendance" textFill="#dddbdb">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
                         </HBox>
                     </children>
                 </VBox>
@@ -77,39 +71,33 @@
             <children>
                 <VBox layoutX="15.0" layoutY="15.0" prefWidth="250.0" style="-fx-border-radius: 100px;" styleClass="stats" stylesheets="@../StyleCheet/style.css" HBox.hgrow="ALWAYS">
                     <children>
-                        <HBox fx:id="add_course_card" alignment="CENTER"  prefHeight="120.0" style="-fx-background-color: #2980b9;" styleClass="top_stats" stylesheets="@../StyleCheet/style.css">
+                        <HBox fx:id="add_course_card" alignment="CENTER" prefHeight="120.0" style="-fx-background-color: #2980b9;" styleClass="top_stats" stylesheets="@../StyleCheet/style.css">
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="80.0" spacing="5.0" style="-fx-background-color: #303952;" styleClass="bottom_stats">
-                            <children>
-                                <Label fx:id="add_course"  prefHeight="23.0" prefWidth="107.0" text="Add Course" textFill="#dddbdb">
-                                    <font>
-                                        <Font name="SF Compact Display Regular" size="18.0" />
-                                    </font>
-                                    <HBox.margin>
-                                        <Insets />
-                                    </HBox.margin>
-                                </Label>
-                            </children>
+                     <children>
+                        <JFXButton fx:id="add_course" onAction="#addCourse" text="Add Course" textFill="#dddbdb">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
                         </HBox>
                     </children>
                 </VBox>
 
                 <VBox layoutX="15.0" layoutY="15.0" prefWidth="250.0" style="-fx-border-radius: 100px;" styleClass="stats" stylesheets="@../StyleCheet/style.css" HBox.hgrow="ALWAYS">
                     <children>
-                        <HBox fx:id="view_course_card" alignment="CENTER"  prefHeight="120.0" style="-fx-background-color: #2980b9;" styleClass="top_stats" stylesheets="@../StyleCheet/style.css">
+                        <HBox fx:id="view_course_card" alignment="CENTER" prefHeight="120.0" style="-fx-background-color: #2980b9;" styleClass="top_stats" stylesheets="@../StyleCheet/style.css">
 
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="80.0" spacing="10.0" style="-fx-background-color: #303952;" styleClass="bottom_stats">
-                            <children>
-                                <Label fx:id="view_course" text="View Course" textFill="#dddbdb">
-                                    <font>
-                                        <Font name="SF Compact Display Regular" size="18.0" />
-                                    </font>
-                                    <HBox.margin>
-                                        <Insets />
-                                    </HBox.margin>
-                                </Label>
-                            </children>
+                     <children>
+                        <JFXButton fx:id="view__course" onAction="#viewCourse" text="View Course" textFill="#dddbdb">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
                         </HBox>
                     </children>
                 </VBox>
@@ -120,16 +108,13 @@
 
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="80.0" spacing="10.0" style="-fx-background-color: #303952;" styleClass="bottom_stats">
-                            <children>
-                                <Label fx:id="stud_report" text="Report" textFill="#dddbdb">
-                                    <font>
-                                        <Font name="SF Compact Display Regular" size="18.0" />
-                                    </font>
-                                    <HBox.margin>
-                                        <Insets />
-                                    </HBox.margin>
-                                </Label>
-                            </children>
+                     <children>
+                        <JFXButton fx:id="view_report" onAction="#report" text="Report" textFill="#dddbdb">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
                         </HBox>
                     </children>
                 </VBox>

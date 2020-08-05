@@ -1,13 +1,10 @@
 package Ui.Dashboard;
 
 import Utils.StudentAttendanceUtils;
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,49 +12,10 @@ import java.util.ResourceBundle;
 public class WelcomeDashboardController implements Initializable {
 
     @FXML
-    private VBox welcome_dashboard;
+    public JFXButton add_course;
 
-    @FXML
-    private Label Welcome;
-
-    @FXML
-    private HBox enroll_card;
-
-    @FXML
-    private HBox enroll_student;
-
-    @FXML
-    private HBox vieiw_stu_card;
-
-    @FXML
-    private Label view_student;
-
-    @FXML
-    private HBox start_attendance_card;
-
-    @FXML
-    private Label start_attendance;
-
-    @FXML
-    private HBox add_course_card;
-
-    @FXML
-    private Label add_course;
-
-    @FXML
-    private HBox view_course_card;
-
-    @FXML
-    private Label view_course;
-
-    @FXML
-    private HBox student_report_card;
-
-    @FXML
-    private Label stud_report;
-
-    @FXML
-    void addCourse(MouseEvent event) {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
 
     }
 
@@ -67,28 +25,27 @@ public class WelcomeDashboardController implements Initializable {
     }
 
     @FXML
-    void startAttendance(MouseEvent event) {
-
+    public void addCourse(ActionEvent actionEvent) {
+        StudentAttendanceUtils.loadWindow(getClass().getResource("/Ui/AddCourse/AddCourse.fxml"), "Add Course", null);
     }
 
     @FXML
-    void studentReport(MouseEvent event) {
-
+    public void viewCourse(ActionEvent actionEvent) {
+        StudentAttendanceUtils.loadWindow(getClass().getResource("/Ui/ViewCourse/ViewCourse.fxml"), "View Course", null);
     }
 
     @FXML
-    void viewCourse(MouseEvent event) {
-
+    public void report(ActionEvent actionEvent) {
+        StudentAttendanceUtils.loadWindow(getClass().getResource("/Ui/StudentReport/StudentReport.fxml"), "Student Report", null);
     }
 
     @FXML
-    void viewStudent(MouseEvent event) {
-
+    public void startAttendance(ActionEvent actionEvent) {
+        StudentAttendanceUtils.loadWindow(getClass().getResource("/Ui/StartAttendance/StartAttendance.fxml"), "Start Attendance", null);
     }
 
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
+    @FXML
+    public void ViewStudent(ActionEvent actionEvent) {
+        StudentAttendanceUtils.loadWindow(getClass().getResource("/Ui/ViewStudent/ViewStudent.fxml"), "View Students", null);
     }
 }
