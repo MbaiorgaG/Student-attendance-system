@@ -1,7 +1,7 @@
 package Ui.Attendance;
 
-import Classes.Student;
-import Classes.Teacher;
+import Model.Student;
+import Model.Teacher;
 import Ui.Login.LoginModel;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
@@ -95,7 +95,6 @@ public class AttendanceController implements Initializable {
             subjs.getItems().add(name);
         }
         subjs.getSelectionModel().selectFirst();
-
     }
 
     private static void updateAtten(Student stud) {

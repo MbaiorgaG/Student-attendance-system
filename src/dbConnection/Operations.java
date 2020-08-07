@@ -1,7 +1,7 @@
 package dbConnection;
 
-import Classes.Student;
-import Classes.Teacher;
+import Model.Student;
+import Model.Teacher;
 import Ui.Login.LoginModel;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
@@ -25,9 +25,14 @@ public class Operations {
                 if (student.getID() != 0) { // to ignore empty fields (otherwise its a NullPointer ma dude)
                     if (String.valueOf(student.getID()).toLowerCase().contains(word)) return true;
                 }
-                if (student.getName() != null) { // to ignore empty fields (otherwise its a NullPointer ma dude)
-                    if (student.getName().toLowerCase().contains(word)) return true;
+
+                if (student.getFirstName() != null) {
+                    if (student.getFirstName().toLowerCase().contains(word)) return true;
                 }
+                if (student.getLastName() != null) {
+                    if (student.getLastName().toLowerCase().contains(word)) return true;
+                }
+
                 if (student.getAbsences() != null) { // to ignore empty fields (otherwise its a NullPointer ma dude)
                     if (student.getAbsences().toLowerCase().contains(word)) return true;
                 }
@@ -59,9 +64,17 @@ public class Operations {
         ResultSet rs = Objects.requireNonNull(conns).createStatement().executeQuery(st);
         while (rs.next()) {
             // store each row in a student object
-            students.add(new Student(rs.getInt("ID"), rs.getString("name"),
-                    rs.getString("gender"), rs.getString("email"), rs.getString("absences"),
-                    rs.getString("bar"), parseSubjs(rs), rs.getBoolean("present"), rs.getString("excuse")));
+            students.add(new Student(
+                    rs.getInt("ID"),
+                    rs.getString("first_name"),
+                    rs.getString("last_name"),
+                    rs.getString("gender"),
+                    rs.getString("email"),
+                    rs.getString("absences"),
+                    rs.getString("bar"),
+                    parseSubjs(rs),
+                    rs.getBoolean("present"),
+                    rs.getString("excuse")));
 
         }
     }
@@ -75,9 +88,17 @@ public class Operations {
             ResultSet rs = Objects.requireNonNull(conns).prepareStatement(query).executeQuery();
             while (rs.next()) {
                 // store each row in a student object
-                students.add(new Student(rs.getInt("ID"), rs.getString("name"),
-                        rs.getString("gender"), rs.getString("email"), rs.getString("absences"),
-                        rs.getString("bar"), parseSubjs(rs), rs.getBoolean("present"), rs.getString("excuse")));
+                students.add(new Student(
+                        rs.getInt("ID"),
+                        rs.getString("first_name"),
+                        rs.getString("last_name"),
+                        rs.getString("gender"),
+                        rs.getString("email"),
+                        rs.getString("absences"),
+                        rs.getString("bar"),
+                        parseSubjs(rs),
+                        rs.getBoolean("present"),
+                        rs.getString("excuse")));
             }
             rs.close(); // close statement
             conns.close(); // close connection for now
@@ -87,7 +108,7 @@ public class Operations {
     }
 
     public static Map<String, String[]> parseSubjs(ResultSet resultSet) throws SQLException {
-        String[] subjs = resultSet.getString("subjects").split("( )");
+        String[] subjs = resultSet.getString("course").split("( )");
         String[][] sections = new String[subjs.length][];
         Map<String, String[]> subjects = new HashMap<>();
         for (int i = 0; i < subjs.length; i++) {

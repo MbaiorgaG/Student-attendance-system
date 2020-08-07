@@ -1,6 +1,6 @@
 package Ui.Dashboard;
 
-import Classes.Teacher;
+import Model.Teacher;
 import Ui.Login.LoginModel;
 import dbConnection.Connect;
 import javafx.fxml.FXML;

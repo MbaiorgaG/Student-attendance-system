@@ -1,6 +1,6 @@
 package Ui.AboutLecturer;
 
-import Classes.Teacher;
+import Model.Teacher;
 import Ui.Login.LoginModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -42,7 +42,7 @@ public class AboutLecturerController implements Initializable {
         Teacher teacher = LoginModel.getLogged(); // get logged in teacher from login model class
 
         // set the about info to that
-        name.setText(teacher.getName());
+        name.setText(teacher.getFirstName() +" "+ teacher.getLastName());
         ID.setText(Integer.toString(teacher.getID()));
         email.setText(teacher.getEmail());
         gender.setText(teacher.getGender());

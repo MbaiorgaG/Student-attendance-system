@@ -1,7 +1,7 @@
 package List;
 
-import Classes.Student;
-import Classes.Teacher;
+import Model.Student;
+import Model.Teacher;
 import Ui.Login.LoginModel;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;

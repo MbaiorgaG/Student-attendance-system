@@ -1,4 +1,4 @@
-package Classes;
+package Model;
 
 import javafx.scene.control.CheckBox;
 
@@ -11,9 +11,10 @@ public class Student extends Person {
     private String bar_status;
 
     // a constructor for the students list page
-    public Student(int ID, String name, String gender, String mail, String absences, String bar_status,
+    public Student(int ID, String fname,String lname, String gender, String mail, String absences, String bar_status,
                    Map<String, String[]> subjects, Boolean present, String excuse) {
-        this.name = name;
+        this.firstName = fname;
+        this.lastName = lname;
         this.ID = ID;
         this.gender = gender;
         this.email = mail;

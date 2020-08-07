@@ -1,6 +1,6 @@
 package Ui.Sidebar;
 
-import Classes.Teacher;
+import Model.Teacher;
 import Ui.Login.LoginModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -61,7 +61,7 @@ public class SidebarController implements Initializable {
         buttons.add(about);
         buttons.add(settings);
 
-        Teacher teacher = LoginModel.getLogged(); // get logged in teacher from login model class
+        Teacher teacher = LoginModel.getLogged();
         logout.setFocusTraversable(false);
         dashboard.setStyle("-fx-background-color: #2980B9");
         try {
@@ -69,12 +69,9 @@ public class SidebarController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        String name = teacher.getName().split(" ")[0];
-        if (teacher.getGender().equals("Male")) {
-            UserName.setText("MR. " + name.toUpperCase());
-        } else {
-            UserName.setText("MS. " + name.toUpperCase());
-        }
+        String name = teacher.getFirstName() + " " + teacher.getLastName();
+
+        UserName.setText(teacher.getXP() + " " + name.toUpperCase());
     }
 
     @FXML
@@ -100,7 +97,7 @@ public class SidebarController implements Initializable {
             loadPane("/Ui/AboutLecturer/AboutLecturer");
         } else if (source == about) {
             loadPane("/Ui/AboutApp/AboutApp");
-        } else if(source == settings){
+        } else if (source == settings) {
             loadPane("/Ui/Settings/Settings");
         }
     }

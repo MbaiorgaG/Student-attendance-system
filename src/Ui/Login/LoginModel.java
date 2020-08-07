@@ -1,6 +1,6 @@
 package Ui.Login;
 
-import Classes.Teacher;
+import Model.Teacher;
 import dbConnection.Connect;
 import dbConnection.Operations;
 
@@ -22,14 +22,22 @@ public class LoginModel {
     private static void setLogged(ResultSet set) throws SQLException {
         // store the logged in user details in an object for later use
 
-        logged = new Teacher(set.getString("name"), set.getString("pass"),
-                set.getInt("id"), set.getString("gender"), set.getString("email"),
-                Operations.parseSubjs(set), set.getString("exp"), set.getLong("phone"));
+        logged = new Teacher(
+                set.getString("first_name"),
+                set.getString("last_name"),
+                set.getString("password"),
+                set.getInt("id"),
+                set.getString("gender"),
+                set.getString("email"),
+                Operations.parseSubjs(set),
+                set.getString("experience"),
+                set.getLong("phone"),
+                set.getString("department"));
     }
 
 
     // check login details
-    boolean isCorrect(String User, String Pass) throws SQLException {
+    boolean isCorrect(String user_email, String password) throws SQLException {
 
         // if connection is closed get it again
         if (con.isClosed()) {
@@ -37,14 +45,14 @@ public class LoginModel {
         }
         PreparedStatement statement;
         ResultSet set;
-        String query = "select * from Teachers where id = ? and pass = ?";
+        String query = "select * from Teachers where email = ? and password = ?";
         statement = Objects.requireNonNull(con).prepareStatement(query);
-        statement.setString(1, User);
-        statement.setString(2, Pass);
+        statement.setString(1, user_email);
+        statement.setString(2, password);
         set = statement.executeQuery();
-        if (set.next()) { // only store the logged in user if its correct
+        if (set.next()) {
             setLogged(set);
-            statement.close(); // this line literally fixed all my database issues
+            statement.close();
             con.close();
             return true;
         } else return false;

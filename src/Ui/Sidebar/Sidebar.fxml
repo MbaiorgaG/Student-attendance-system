@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
@@ -9,10 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import de.jensd.fx.glyphs.octicons.OctIconView?>
-<BorderPane fx:id="homePane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #95afc0;" xmlns="http://javafx.com/javafx/11.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ui.Sidebar.SidebarController">
+<BorderPane fx:id="homePane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #95afc0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ui.Sidebar.SidebarController">
     <left>
         <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="670.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: #303952;">
             <HBox fx:id="dashboard" layoutX="10.0" layoutY="181.0" onMouseClicked="#changeView" prefHeight="40.0" prefWidth="200.0" spacing="15.0" styleClass="sidebar-button" stylesheets="@../StyleCheet/style.css">
@@ -179,11 +178,6 @@
         <HBox alignment="CENTER_LEFT" prefHeight="50.0" style="-fx-background-color: #303952;" BorderPane.alignment="TOP_RIGHT">
             <children>
                 <HBox alignment="CENTER_LEFT" maxWidth="202.0" prefHeight="39.0" prefWidth="200.0" spacing="5.0" style="-fx-background-color: #2980b9; -fx-border-radius: 0 10 10 0;" HBox.hgrow="NEVER">
-                    <OctIconView fill="#dddbdb" glyphName="MENTION" size="18">
-                        <HBox.margin>
-                            <Insets left="20.0" />
-                        </HBox.margin>
-                    </OctIconView>
                     <Label fx:id="UserName" contentDisplay="RIGHT" prefHeight="40.0" prefWidth="257.0" text="UserName" textFill="#dddbdb">
                         <HBox.margin>
                             <Insets left="5.0" />

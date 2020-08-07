@@ -11,7 +11,9 @@ import java.io.IOException;
 import java.net.URL;
 
 public class StudentAttendanceUtils {
+
     public static final String ICON_IMAGE_LOC = "/Ui/resources/window.png";
+
 
 
     public static Object loadWindow(URL loc, String title, Stage parentStage) {
@@ -36,7 +38,7 @@ public class StudentAttendanceUtils {
         return controller;
     }
 
-    private static void setStageIcon(Stage stage) {
+    public static void setStageIcon(Stage stage) {
         stage.getIcons().add(new Image(ICON_IMAGE_LOC));
     }
 

@@ -1,11 +1,12 @@
-package Classes;
+package Model;
 
 import java.util.HashMap;
 import java.util.Map;
 
 // i dont think this needs any comments
 public class Person {
-    String name;
+    String firstName;
+    String lastName;
     int ID;
     String gender;
     String email;
@@ -15,12 +16,20 @@ public class Person {
     Person() {
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public int getID() {
