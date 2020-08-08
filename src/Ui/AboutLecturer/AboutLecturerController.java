@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
+import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 
@@ -47,8 +48,9 @@ public class AboutLecturerController implements Initializable {
         email.setText(teacher.getEmail());
         gender.setText(teacher.getGender());
         subjects.setText("");
-        Map<String,  String[]> subj = teacher.getSubjects();
-        for (String name: subj.keySet()){
+        List<String> subj;
+        subj = teacher.getSubjects();
+        for (String name: subj){
             subjects.setText(subjects.getText() + name + ", ");
         }
         exp.setText(teacher.getXP());

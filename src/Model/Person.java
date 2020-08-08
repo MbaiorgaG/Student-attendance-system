@@ -1,6 +1,8 @@
 package Model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 // i dont think this needs any comments
@@ -11,7 +13,7 @@ public class Person {
     String gender;
     String email;
     long phone;
-    Map<String, String[]> subjects = new HashMap<>();
+    List<String> subjects = new ArrayList<>();
 
     Person() {
     }
@@ -64,7 +66,11 @@ public class Person {
         this.phone = phone;
     }
 
-    public Map<String, String[]> getSubjects() {
+    public List<String> getSubjects() {
         return subjects;
+    }
+
+    public void setSubjects(List<String> subjects) {
+        this.subjects = subjects;
     }
 }

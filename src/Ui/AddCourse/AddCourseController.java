@@ -1,6 +1,7 @@
 package Ui.AddCourse;
 
 import Model.Course;
+import Model.Teacher;
 import Utils.AlertMaker;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
@@ -12,16 +13,18 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.Connection;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.*;
 
 public class AddCourseController implements Initializable {
 
@@ -79,9 +82,9 @@ public class AddCourseController implements Initializable {
     private JFXComboBox<String> setUpCourseLecturer() {
         courseLectBox.setPromptText("Select Course Lecturer");
         courseLectBox.setLabelFloat(false);
-        //Retrive courses from table
-        List<String> courseLect = Arrays.asList("Dr. Musa David","Prof. Ali Jacob","Mrs Adeboye Matthew","John Emeka");
-        ObservableList<String> courseOList = FXCollections.observableArrayList(courseLect);
+        List<String> list = FXCollections.observableArrayList();
+        loadLect(list);
+        ObservableList<String> courseOList = FXCollections.observableArrayList(list);
         courseLectBox.setItems(courseOList);
         return courseLectBox;
     }
@@ -89,8 +92,8 @@ public class AddCourseController implements Initializable {
     private JFXComboBox<String> setUpCoursePrereq() {
         coursePrereqBox.setPromptText("Select Course Prerequisite");
         coursePrereqBox.setLabelFloat(false);
-        //Retrive courses from table
-        List<String> coursePrereq = Arrays.asList("Physics","English","Chemistry","math");
+        //Retrieve courses from table
+        List<String> coursePrereq = Arrays.asList("Physics", "English", "Chemistry", "math");
         ObservableList<String> courseOList = FXCollections.observableArrayList(coursePrereq);
         coursePrereqBox.setItems(courseOList);
         return coursePrereqBox;
@@ -99,7 +102,7 @@ public class AddCourseController implements Initializable {
     private JFXComboBox<String> setUpCourseUnit() {
         courseUnitBox.setPromptText("Select Course Unit");
         courseUnitBox.setLabelFloat(true);
-        List<String> courseUnit = Arrays.asList("1","2","3","4");
+        List<String> courseUnit = Arrays.asList("1", "2", "3", "4");
         ObservableList<String> courseOList = FXCollections.observableArrayList(courseUnit);
         courseUnitBox.setItems(courseOList);
         return courseUnitBox;
@@ -108,12 +111,14 @@ public class AddCourseController implements Initializable {
 
     @FXML
     void cancel(ActionEvent event) {
-
+        Stage stage = (Stage) rootPane.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
     void close(ActionEvent event) {
-
+        Stage stage = (Stage) rootPane.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
@@ -145,35 +150,35 @@ public class AddCourseController implements Initializable {
         boolean isLecturereSelected = courseLectBox.getSelectionModel().isEmpty();
 
 
-        if(courseID.isEmpty()){
-            AlertMaker.showMaterialDialog(rootPane,mainContainer, new ArrayList<>(),
-                    "Invalid Name","Please enter a valid name.");
+        if (courseID.isEmpty()) {
+            AlertMaker.showMaterialDialog(rootPane, mainContainer, new ArrayList<>(),
+                    "Invalid Name", "Please enter a valid name.");
             return;
         }
-        if(isUnitSelected){
-            AlertMaker.showMaterialDialog(rootPane,mainContainer, new ArrayList<>(),
-                    "Invalid Course Unit","Please enter Information.");
+        if (isUnitSelected) {
+            AlertMaker.showMaterialDialog(rootPane, mainContainer, new ArrayList<>(),
+                    "Invalid Course Unit", "Please enter Information.");
             return;
         }
-        if(courseTitle.isEmpty()){
-            AlertMaker.showMaterialDialog(rootPane,mainContainer, new ArrayList<>(),
-                    "Invalid Title","Please enter a valid Course Title.");
+        if (courseTitle.isEmpty()) {
+            AlertMaker.showMaterialDialog(rootPane, mainContainer, new ArrayList<>(),
+                    "Invalid Title", "Please enter a valid Course Title.");
             return;
         }
-        if(isPrereqSelected){
-            AlertMaker.showMaterialDialog(rootPane,mainContainer, new ArrayList<>(),
-                    "Invalid Course prerequisite","Please enter a valid Information.");
+        if (isPrereqSelected) {
+            AlertMaker.showMaterialDialog(rootPane, mainContainer, new ArrayList<>(),
+                    "Invalid Course prerequisite", "Please enter a valid Information.");
             return;
         }
-        if(isLecturereSelected){
-            AlertMaker.showMaterialDialog(rootPane,mainContainer, new ArrayList<>(),
-                    "Select a Course Lecturer","Select a valid course lecturer.");
+        if (isLecturereSelected) {
+            AlertMaker.showMaterialDialog(rootPane, mainContainer, new ArrayList<>(),
+                    "Select a Course Lecturer", "Select a valid course lecturer.");
             return;
         }
 
         if (DataHelper.isCourseExist(courseID)) {
             AlertMaker.showMaterialDialog(rootPane, mainContainer, new ArrayList<>(), "Duplicate Course id",
-                    "Course with same Course ID exists.\nPlease use new Course");
+                    "Course with same Course ID exists.\nPlease add a new Course");
             return;
         }
 
@@ -199,6 +204,32 @@ public class AddCourseController implements Initializable {
         courseUnitBox.getSelectionModel().clearSelection();
         coursePrereqBox.getSelectionModel().clearSelection();
         courseLectBox.getSelectionModel().clearSelection();
+    }
+
+    private List loadLect(List<String> list) {
+        list.clear();
+        try {
+            String query = "SELECT * FROM Teachers";
+            PreparedStatement stmt = Objects.requireNonNull(dbConnection).prepareStatement(query);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                String exp = rs.getString("experience");
+                String Fname = rs.getString("first_name");
+                String Lname = rs.getString("last_name");
+
+                String lecturer = exp + " " + Fname + " " + Lname;
+                list.add(lecturer);
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Select Lecturer");
+            alert.setHeaderText("There are no lecturers in the department!");
+            alert.show();
+        }
+        return list;
     }
 
 }

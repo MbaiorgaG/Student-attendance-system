@@ -1,5 +1,6 @@
 package Model;
 
+import java.util.List;
 import java.util.Map;
 
 public class Teacher extends Person {
@@ -8,7 +9,7 @@ public class Teacher extends Person {
     private String department;
 
     public Teacher(String fname, String lname, String pass, int ID, String gender, String email,
-                   Map<String, String[]> subjects, String XP, long phone, String department) {
+                   List<String> subjects, String XP, long phone, String department) {
         this.firstName = fname;
         this.lastName = lname;
         Pass = pass;
@@ -20,6 +21,13 @@ public class Teacher extends Person {
         this.phone = phone;
         this.department = department;
     }
+
+    public Teacher(String exp, String fname, String lname) {
+        this.XP = exp;
+        this.firstName = fname;
+        this.lastName = lname;
+    }
+
 
     public String getXP() {
         return XP;

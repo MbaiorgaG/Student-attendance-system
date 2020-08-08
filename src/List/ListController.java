@@ -120,8 +120,8 @@ public class ListController implements Initializable {
         list_table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         //initialize the drop down menu
         subjs.getItems().add("All");
-        Map<String, String[]> subs = logged.getSubjects();
-        for (String name: subs.keySet()){
+        List<String> subs = logged.getSubjects();
+        for (String name: subs){
             subjs.getItems().add(name);
         }
         subjs.getSelectionModel().selectFirst();

@@ -22,10 +22,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.Calendar;
-import java.util.Map;
-import java.util.Objects;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import static dbConnection.Operations.*;
 
@@ -90,8 +87,8 @@ public class AttendanceController implements Initializable {
         }
 
         subjs.getItems().add("All");
-        Map<String, String[]> subs = logged.getSubjects();
-        for (String name : subs.keySet()) {
+        List<String> subs = logged.getSubjects();
+        for (String name : subs) {
             subjs.getItems().add(name);
         }
         subjs.getSelectionModel().selectFirst();

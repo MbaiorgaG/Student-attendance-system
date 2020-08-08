@@ -2,14 +2,12 @@ package dbConnection;
 
 import Model.Course;
 import Model.Student;
-import javafx.scene.control.Alert;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Objects;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
-
-import static dbConnection.Operations.LoadData;
 
 public class DataHelper {
     //    private final static Logger LOGGER = LogManager.getLogger(DatabaseHandler.class.getName());
@@ -57,7 +55,7 @@ public class DataHelper {
 
     }
 
-    public static boolean insertNewMember(Student member) {
+    public static boolean insertNewStudent(Student student) {
 //        try {
 //            PreparedStatement statement = DatabaseHandler.getInstance().getConnection().prepareStatement(
 //                    "INSERT INTO MEMBER(id,Fname,Lname,mobile,email) VALUES(?,?,?,?,?)");
@@ -74,36 +72,35 @@ public class DataHelper {
     }
 
     public static boolean isCourseExist(String id) {
-//        try {
-//            String checkstmt = "SELECT COUNT(*) FROM COURSE WHERE id=?";
-//            PreparedStatement stmt = DatabaseHandler.getInstance().getConnection().prepareStatement(checkstmt);
-//            stmt.setString(1, id);
-//            ResultSet rs = stmt.executeQuery();
-//            if (rs.next()) {
-//                int count = rs.getInt(1);
-//                System.out.println(count);
-//                return (count > 0);
-//            }
-//        } catch (SQLException ex) {
-//            LOGGER.log(Level.ERROR, "{}", ex);
-//        }
+        try {
+            String checkstmt = "SELECT COUNT(*) FROM Course WHERE id=?";
+            PreparedStatement stmt = Objects.requireNonNull(connection).prepareStatement(checkstmt);
+            stmt.setString(1, id);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                int count = rs.getInt(1);
+                return (count > 0);
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
         return false;
     }
 
     public static boolean isStudentExists(String id) {
-//        try {
-//            String checkstmt = "SELECT COUNT(*) FROM MEMBER WHERE id=?";
-//            PreparedStatement stmt = DatabaseHandler.getInstance().getConnection().prepareStatement(checkstmt);
-//            stmt.setString(1, id);
-//            ResultSet rs = stmt.executeQuery();
-//            if (rs.next()) {
-//                int count = rs.getInt(1);
-//                System.out.println(count);
-//                return (count > 0);
-//            }
-//        } catch (SQLException ex) {
-//            LOGGER.log(Level.ERROR, "{}", ex);
-//        }
+        try {
+            String checkstmt = "SELECT COUNT(*) FROM student WHERE id=?";
+            PreparedStatement stmt = Objects.requireNonNull(connection).prepareStatement(checkstmt);
+            stmt.setString(1, id);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                int count = rs.getInt(1);
+                System.out.println(count);
+                return (count > 0);
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
         return false;
     }
 
@@ -119,6 +116,7 @@ public class DataHelper {
 //        }
         return null;
     }
+
 
 
 //    public static boolean updateMailServerInfo(MailServerInfo mailServerInfo) {
