@@ -56,18 +56,28 @@ public class DataHelper {
     }
 
     public static boolean insertNewStudent(Student student) {
-//        try {
-//            PreparedStatement statement = DatabaseHandler.getInstance().getConnection().prepareStatement(
-//                    "INSERT INTO MEMBER(id,Fname,Lname,mobile,email) VALUES(?,?,?,?,?)");
-//            statement.setString(1, member.getId());
-//            statement.setString(2, member.getFname());
-//            statement.setString(2, member.getLname());
-//            statement.setString(3, member.getMobile());
-//            statement.setString(4, member.getEmail());
-//            return statement.executeUpdate() > 0;
-//        } catch (SQLException ex) {
-//            LOGGER.log(Level.ERROR, "{}", ex);
-//        }
+        checkConn();
+        String query = "INSERT INTO student(matric_no,first_name,last_name,gender, absences,course, present, excuse,department,date_of_birth,phoneNo, stud_level) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
+        try {
+            PreparedStatement statement = Objects.requireNonNull(connection).prepareStatement(query);
+            statement.setString(1, student.getMatricNo());
+            statement.setString(2, student.getFirstName());
+            statement.setString(3, student.getLastName());
+            statement.setString(4, student.getGender());
+            statement.setInt(5, student.getAbsences());
+            statement.setString(6, String.valueOf(student.getSubjects()));
+            statement.setInt(7, student.getPresent());
+            statement.setInt(8, student.getExcuse());
+            statement.setString(9, student.getDepartment());
+            statement.setString(10, student.getData_of_birth());
+            statement.setString(11, student.getPhoneNo());
+            statement.setString(12, student.getLevelOfStudy());
+            statement.execute();
+            statement.close(); // close statement
+            connection.close(); // close connection
+        } catch (SQLException ex) {
+          ex.printStackTrace();
+        }
         return false;
     }
 

@@ -82,9 +82,9 @@ public class AttendanceController implements Initializable {
         excuse_col.setCellFactory(TextFieldTableCell.forTableColumn()); // enable column editing
         list_table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY); // resize column based on whole table(window) size
 
-        for (Student stud : students) {
-            stud.getPresent().setOnAction(e -> updateAtten(stud));
-        }
+//        for (Student stud : students) {
+//            stud.getPresent().setOnAction(e -> updateAtten(stud));
+//        }
 
         subjs.getItems().add("All");
         List<String> subs = logged.getSubjects();
@@ -100,7 +100,7 @@ public class AttendanceController implements Initializable {
         try {
             checkConn(); // check connection
             PreparedStatement psts = conns.prepareStatement(query);
-            psts.setBoolean(1, stud.getPresent().isSelected());
+//            psts.setBoolean(1, stud.getPresent().isSelected());
             psts.setString(2, String.valueOf(stud.getID())); // pass the id of the column that has to be edited
             conns.isClosed();
             psts.execute(); // execute query
@@ -141,7 +141,7 @@ public class AttendanceController implements Initializable {
     void setClass(ActionEvent event) throws SQLException {
         DropFilter((JFXComboBox) event.getSource(), section, subjs, list_table, students, logged);
         for (Student stud : students) {
-            stud.getPresent().setOnAction(e -> updateAtten(stud));
+//            stud.getPresent().setOnAction(e -> updateAtten(stud));
         }
     }
 

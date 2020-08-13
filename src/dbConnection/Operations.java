@@ -36,9 +36,9 @@ public class Operations {
 //                if (student.getAbsences() != null) { // to ignore empty fields (otherwise its a NullPointer ma dude)
 //                    if (student.getAbsences().toLowerCase().contains(word)) return true;
 //                }
-                if (student.getBar_status() != null) { // to ignore empty fields (otherwise its a NullPointer ma dude)
-                    if (student.getBar_status().toLowerCase().contains(word)) return true;
-                }
+//                if (student.getBar_status() != null) { // to ignore empty fields (otherwise its a NullPointer ma dude)
+//                    if (student.getBar_status().toLowerCase().contains(word)) return true;
+//                }
                 if (student.getEmail() != null) { // to ignore empty fields (otherwise its a NullPointer ma dude)
                     return student.getEmail().toLowerCase().contains(word);
                 }

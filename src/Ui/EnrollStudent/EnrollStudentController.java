@@ -1,6 +1,5 @@
 package Ui.EnrollStudent;
 
-import Model.Course;
 import Model.Student;
 import Utils.AlertMaker;
 import com.jfoenix.controls.*;
@@ -19,7 +18,6 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -44,9 +42,6 @@ public class EnrollStudentController implements Initializable {
 
     @FXML
     private JFXTextField phone;
-
-    @FXML
-    private JFXTextField date;
 
     @FXML
     private JFXDatePicker dob;
@@ -152,7 +147,7 @@ public class EnrollStudentController implements Initializable {
             return;
         }
 
-        if (dob.getValue() != null) {
+        if (dob.getValue() == null) {
             AlertMaker.showMaterialDialog(rootPane, root, new ArrayList<>(),
                     "Invalid Date", "Please enter a valid Date.");
             return;
@@ -177,14 +172,17 @@ public class EnrollStudentController implements Initializable {
             return;
         }
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-        String st = dateFormat.format(dateFormat.parse(date.toString()));
+        JFXDatePicker datePicker = new JFXDatePicker(date);
+        String date1 = datePicker.getValue().toString();
 
-        if(st != null){
+        captureStudent();
+
+
+        if(!date1.isEmpty()){
             Student student = new Student(matricNo,firstName,surName,sex.getValue(),
-                    "gabriel@gmail.com",32,"accepted",
-                    Collections.singletonList("CPT211,CPT112,CPT332,CPT443"),true,"I cant make it",
-                    "aimagekljfdjajl","Computer Science");
+                    0,Collections.singletonList("CPT211,CPT112,CPT332,CPT443"),
+                    0,0,
+                   dept,date1,phoneNo,levelofstudy.getValue());
 
             boolean result = DataHelper.insertNewStudent(student);
             if (!result) {
@@ -204,6 +202,9 @@ public class EnrollStudentController implements Initializable {
         }
 
 
+    }
+
+    private void captureStudent() {
 
 
     }
