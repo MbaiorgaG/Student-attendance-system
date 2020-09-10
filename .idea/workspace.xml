@@ -1,170 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="Attendance Final" />
-    </artifacts-to-build>
-  </component>
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Dashboard/Dashboard.fxml" line="147" mnemonic="5" />
-  </component>
-  <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attendance Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Attendance Final.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/Settings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/Settings.fxml" afterDir="false" />
-    </list>
-    <ignored path="JavaFxApplication.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Attendance_Final$Main.ic" NAME="Main Coverage Results" MODIFIED="1544535347463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Login.*</FILTER>
-    </SUITE>
-  </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
+  <component name="BranchesTreeState">
     <expand>
       <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="PersonDB" type="feb32156:DbDataSourceImpl" />
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
       <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="PersonDB" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
       <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="PersonDB" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="PersonDB" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="Settings: table" type="3d80ac25:SqliteImplModel$Table" />
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
     <select />
   </component>
-  <component name="DebuggerManager">
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
-    <ui_properties converted="true" />
-    <breakpoint_rules converted="true" />
-  </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
-  </component>
-  <component name="ExportToHTMLSettings">
-    <option name="printScope" value="1" />
-    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="JavaFxApplication" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dbConnection/Operations.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Settings/Settings.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Attendance/AttendanceController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Settings/Settings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="ChangeListManager">
+    <list default="true" id="f6cdc284-1316-4fd7-87ff-aafa630bffda" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/azureSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/charm_glisten_4_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/dpjavapos.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/dpuareu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jpos113.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/xercesImpl_2_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/xmlParserAPIs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/charm-glisten-4.4.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/dpjavapos.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/dpuareu.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jpos113.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/xercesImpl-2.6.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/xmlParserAPIs.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Attendance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ui/Enrollment/Capabilities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ui/Enrollment/Capture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ui/Enrollment/CaptureThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ui/Enrollment/Enrollment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ui/Enrollment/Identification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ui/Enrollment/ImagePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ui/Enrollment/MessageBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ui/Enrollment/Selection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ui/Enrollment/UareUSampleJava.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ui/Enrollment/UareUSampleJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ui/Enrollment/Verification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ui/resources/fingerprint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ui/resources/images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/Capabilities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/FXUtilities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/MessageBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/Selection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dbConnection/Enrollment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/PersonDB.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/List/List.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/List/List.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/List/ListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/List/ListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/AboutApp/AboutApp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/AboutApp/AboutApp.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/AboutApp/AboutAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/AboutApp/AboutAppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/AboutLecturer/AboutLecturer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/AboutLecturer/AboutLecturer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/AboutLecturer/AboutLecturerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/AboutLecturer/AboutLecturerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/AddCourse/AddCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/AddCourse/AddCourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/AddCourse/MemberAddLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/Attendance/Attendance.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/Attendance/AttendanceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/Dashboard/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/Dashboard/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/Dashboard/WelcomeDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/Dashboard/WelcomeDashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/Dashboard/WelcomeDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/Dashboard/WelcomeDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/EnrollStudent/EnrollStudent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/EnrollStudent/EnrollStudent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/EnrollStudent/EnrollStudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/EnrollStudent/EnrollStudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/EnrollStudent/StudentAddLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/Login/LoginModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/Login/LoginModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/Sidebar/SidebarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/Sidebar/SidebarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/StartAttendance/StartAttendance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/StartAttendance/StartAttendance.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/StartAttendance/StartAttendanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/StartAttendance/StartAttendanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/StudentReport/StudentReport.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/StudentReport/StudentAttendanceReport.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/StudentReport/StudentReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/StudentReport/StudentAttendanceReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/ViewCourse/ViewCourse.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/ViewLecturers/ViewAllLecturers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/ViewCourse/ViewCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/ViewLecturers/ViewAllLecturersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/ViewStudent/ViewStudent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/ViewStudent/ViewAllStudent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/ViewStudent/ViewStudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/ViewStudent/ViewAllStudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dbConnection/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbConnection/Connect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dbConnection/DataHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbConnection/DataHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dbConnection/Operations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbConnection/Operations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_attendance_system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/student_attendance_system.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -174,767 +107,400 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>pass_toggle</find>
-      <find>hover</find>
-      <find>sty</find>
-      <find>pressed</find>
-      <find>backgr</find>
-      <find>Username</find>
-      <find>UserN</find>
-      <find>pas</find>
-      <find>past</find>
-      <find>rs</find>
-      <find>mail</find>
-      <find>insert</find>
-      <find>subcol</find>
-      <find>username</find>
-      <find>btn</find>
-      <find>ona</find>
-      <find>return</find>
-      <find>setclass</find>
-      <find>we</find>
-      <find>subj</find>
-    </findStrings>
-  </component>
-  <component name="FindManager">
-    <FindUsagesManager>
-      <setting name="OPEN_NEW_TAB" value="false" />
-    </FindUsagesManager>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
-        <option value="$PROJECT_DIR$/src/Main/sample.fxml" />
-        <option value="$PROJECT_DIR$/src/Login/sample.fxml" />
-        <option value="$PROJECT_DIR$/src/Login/Controller.java" />
-        <option value="$PROJECT_DIR$/src/Login/wrongPass.java" />
-        <option value="$PROJECT_DIR$/src/Login/AlertBox.java" />
-        <option value="$PROJECT_DIR$/src/Home/homeController.kt" />
-        <option value="$PROJECT_DIR$/src/About/About.fxml" />
-        <option value="$PROJECT_DIR$/src/StudentsList/StudentsList.fxml" />
-        <option value="$PROJECT_DIR$/src/Login/titleBar.fxml" />
-        <option value="$PROJECT_DIR$/src/Login/Alert.java" />
-        <option value="$PROJECT_DIR$/src/Home/Home.fxml" />
-        <option value="$PROJECT_DIR$/src/Home/homeController.java" />
-        <option value="$PROJECT_DIR$/src/Sidebar/homeController.java" />
-        <option value="$PROJECT_DIR$/src/list/List.fxml" />
-        <option value="$PROJECT_DIR$/src/TestTeacher.java" />
-        <option value="$PROJECT_DIR$/src/Database/Connection.java" />
-        <option value="$PROJECT_DIR$/src/Database/Connect.java" />
-        <option value="$PROJECT_DIR$/src/About/AboutController.java" />
-        <option value="$PROJECT_DIR$/src/AboutLecturer/AboutLecturer.fxml" />
-        <option value="$PROJECT_DIR$/src/example.fxml" />
-        <option value="$PROJECT_DIR$/src/Dashboard/Dashboard.fxml" />
-        <option value="$PROJECT_DIR$/Attendance Final.iml" />
-        <option value="$PROJECT_DIR$/src/dbConnection/Manager.java" />
-        <option value="$PROJECT_DIR$/src/Sidebar/Sidebar.fxml" />
-        <option value="$PROJECT_DIR$/src/Login/Main.java" />
-        <option value="$PROJECT_DIR$/src/StyleCheet/style.css" />
-        <option value="$APPLICATION_CONFIG_DIR$/idea.properties" />
-        <option value="$PROJECT_DIR$/src/AboutApp/AboutAppController.java" />
-        <option value="$PROJECT_DIR$/src/Login/Login.fxml" />
-        <option value="$PROJECT_DIR$/src/Classes/Filters.java" />
-        <option value="$PROJECT_DIR$/src/dbConnection/Filters.java" />
-        <option value="$PROJECT_DIR$/src/Settings/Settings.fxml" />
-        <option value="$PROJECT_DIR$/src/Sidebar/SidebarController.java" />
-        <option value="$PROJECT_DIR$/src/Attendance/Attendance.fxml" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3f3abf20-74da-4637-9f0e-7a7df63aff81/console.sql" />
-        <option value="$PROJECT_DIR$/src/Classes/Person.java" />
-        <option value="$PROJECT_DIR$/src/List/List.fxml" />
-        <option value="$PROJECT_DIR$/src/Dashboard/DashboardController.java" />
-        <option value="$PROJECT_DIR$/src/Login/LoginModel.java" />
-        <option value="$PROJECT_DIR$/src/dbConnection/Connect.java" />
-        <option value="$PROJECT_DIR$/src/Classes/Teacher.java" />
-        <option value="$PROJECT_DIR$/src/AboutLecturer/AboutLecturerController.java" />
-        <option value="$PROJECT_DIR$/src/Classes/Student.java" />
-        <option value="$PROJECT_DIR$/src/List/ListController.java" />
-        <option value="$PROJECT_DIR$/src/Attendance/AttendanceController.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/src/Login/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/Settings/Settings.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/dbConnection/Operations.java" />
-      </list>
-    </option>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Ui/StartAttendance/StartAttendance.fxml" root0="SKIP_INSPECTION" />
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="40" />
-    <option name="width" value="668" />
-    <option name="height" value="354" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
-  </component>
-  <component name="ProjectView">
-    <navigator currentView="PackagesPane" proportions="" version="1">
-      <flattenPackages PackagesPane="false" />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
-          <expand>
-            <path>
-              <item name="Attendance Final" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Attendance Final" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="Attendance Final" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Attendance Final" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Attendance Final" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Attendance Final" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="Attendance Final" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Attendance Final" type="616d4139:PackageViewModuleNode" />
-              <item name="Attendance" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="Attendance Final" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Attendance Final" type="616d4139:PackageViewModuleNode" />
-              <item name="dbConnection" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="Attendance Final" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Attendance Final" type="616d4139:PackageViewModuleNode" />
-              <item name="Settings" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane" />
-    </panes>
+  <component name="ProjectId" id="1f8P0dvpy676UFWqqAiARVg8Egj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="true" />
-    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="attendance_final" />
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="OverrideImplement.combined" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="logout&#9;PSI&#9;JAVA://Sidebar.SidebarController#logoutNow&#10;delete&#9;PSI&#9;JAVA://List.ListController#deleteRow" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554107874273" />
-    <property name="create.test.in.the.same.root" value="true" />
-    <property name="database.console.LAST_STATE" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="/usr/lib/jvm/java-13-openjdk/lib" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TestAlgorithm" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="project.structure.proportion" value="0.18733509" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Ui.AddCourse" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="dbConnection" />
+      <recent name="Ui" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/resources" />
-      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="C:\Users\gabri\Documents\student_attendance_system\Database" />
+      <recent name="C:\Users\gabri\Documents\student_attendance_system\src\Ui\Enrollment\swing" />
+      <recent name="C:\Users\gabri\Documents\student_attendance_system\lib" />
+      <recent name="C:\Users\gabri\Documents\student_attendance_system\src\Ui\resources" />
+      <recent name="C:\Users\gabri\Documents\student_attendance_system\src\Resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Ui.Enrollment" />
+      <recent name="dbConnection" />
+      <recent name="Utils" />
+      <recent name="Ui.Capture" />
+      <recent name="Ui.EnrollStudent" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="C:\Users\gabri\Documents\student_attendance_system\src\Ui\resources" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
-      <Host>localhost</Host>
-      <Port>5050</Port>
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Login.Main" />
-      <module name="Attendance Final" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ui.Login.Main" />
+      <module name="student_attendance_system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Login.*" />
+          <option name="PATTERN" value="Ui.Login.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ui.Login.Main" />
+      <module name="student_attendance_system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ui.Enrollment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <properties />
-      <listeners />
+    <configuration name="Selection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Utils.Selection" />
+      <module name="student_attendance_system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ui.Enrollment.main" />
+      <module name="student_attendance_system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ui.Enrollment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Selection" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="StructureViewFactory">
-    <option name="ACTIVE_ACTIONS" value=",SHOW_FIELDS" />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
-      <created>1359379246138</created>
+      <changelist id="f6cdc284-1316-4fd7-87ff-aafa630bffda" name="Default Changelist" comment="" />
+      <created>1595596525466</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1359379246138</updated>
-      <workItem from="1359379250712" duration="1302000" />
-      <workItem from="1554838777495" duration="1268000" />
-      <workItem from="1554840849952" duration="208000" />
-      <workItem from="1555389316175" duration="18000" />
-      <workItem from="1557346347109" duration="364000" />
-      <workItem from="1557425170192" duration="592000" />
-      <workItem from="1558456353898" duration="17992000" />
-      <workItem from="1558540153325" duration="2352000" />
-      <workItem from="1558542568834" duration="10552000" />
-      <workItem from="1559911908501" duration="40000" />
-      <workItem from="1559911997671" duration="19086000" />
-      <workItem from="1560150269755" duration="22416000" />
-      <workItem from="1559884781728" duration="17601000" />
-      <workItem from="1561366480769" duration="1110000" />
-      <workItem from="1562927714807" duration="1043000" />
-      <workItem from="1564484212796" duration="128000" />
+      <updated>1595596525466</updated>
+      <workItem from="1595596533498" duration="1906000" />
+      <workItem from="1595601340132" duration="2444000" />
+      <workItem from="1595658087543" duration="822000" />
+      <workItem from="1595686134870" duration="1701000" />
+      <workItem from="1595687907830" duration="3141000" />
+      <workItem from="1595716223332" duration="654000" />
+      <workItem from="1595801687405" duration="1971000" />
+      <workItem from="1595844743323" duration="255000" />
+      <workItem from="1595847329818" duration="594000" />
+      <workItem from="1595877259346" duration="594000" />
+      <workItem from="1595927223941" duration="1501000" />
+      <workItem from="1595929417628" duration="2183000" />
+      <workItem from="1595932209381" duration="8497000" />
+      <workItem from="1596023255743" duration="23000" />
+      <workItem from="1596125461970" duration="571000" />
+      <workItem from="1596192319085" duration="815000" />
+      <workItem from="1596401382197" duration="2908000" />
+      <workItem from="1596536672765" duration="190000" />
+      <workItem from="1596611341220" duration="9839000" />
+      <workItem from="1596629421425" duration="1683000" />
+      <workItem from="1596676603634" duration="155000" />
+      <workItem from="1596793563832" duration="18803000" />
+      <workItem from="1596891392344" duration="7261000" />
+      <workItem from="1596902626453" duration="1151000" />
+      <workItem from="1596903802468" duration="320000" />
+      <workItem from="1596904479337" duration="7838000" />
+      <workItem from="1597015682227" duration="823000" />
+      <workItem from="1597081373818" duration="9020000" />
+      <workItem from="1597218027055" duration="6960000" />
+      <workItem from="1597248916895" duration="1714000" />
+      <workItem from="1597265587378" duration="2163000" />
+      <workItem from="1597327644587" duration="606000" />
+      <workItem from="1597417229136" duration="4020000" />
+      <workItem from="1597446734313" duration="601000" />
+      <workItem from="1597755978749" duration="592000" />
+      <workItem from="1597789928441" duration="1188000" />
+      <workItem from="1597823677528" duration="550000" />
+      <workItem from="1597844592054" duration="590000" />
+      <workItem from="1597861551974" duration="11000" />
+      <workItem from="1598418975499" duration="2802000" />
+      <workItem from="1598623185266" duration="598000" />
+      <workItem from="1598650205686" duration="2752000" />
+      <workItem from="1598683609375" duration="4013000" />
+      <workItem from="1598694967765" duration="448000" />
+      <workItem from="1598695842255" duration="3548000" />
+      <workItem from="1598701755129" duration="925000" />
+      <workItem from="1598716250794" duration="7980000" />
+      <workItem from="1598732646551" duration="1425000" />
+      <workItem from="1598735844361" duration="219000" />
+      <workItem from="1598740226469" duration="10362000" />
+      <workItem from="1598795829223" duration="594000" />
+      <workItem from="1598859769185" duration="333000" />
+      <workItem from="1598863165402" duration="42000" />
+      <workItem from="1598877047282" duration="2016000" />
+      <workItem from="1598879399106" duration="1148000" />
+      <workItem from="1598882999235" duration="5896000" />
+      <workItem from="1599075233572" duration="3940000" />
+      <workItem from="1599082641164" duration="600000" />
+      <workItem from="1599146558996" duration="26220000" />
+      <workItem from="1599180491492" duration="5161000" />
+      <workItem from="1599186221928" duration="3906000" />
+      <workItem from="1599202888861" duration="1953000" />
+      <workItem from="1599208670724" duration="23419000" />
+      <workItem from="1599248935512" duration="1806000" />
+      <workItem from="1599251090278" duration="16669000" />
+      <workItem from="1599299393603" duration="2004000" />
+      <workItem from="1599315035432" duration="9922000" />
+      <workItem from="1599328185657" duration="8475000" />
+      <workItem from="1599337985707" duration="879000" />
+      <workItem from="1599339129248" duration="721000" />
+      <workItem from="1599339876244" duration="1433000" />
+      <workItem from="1599344580100" duration="6358000" />
+      <workItem from="1599383646470" duration="1901000" />
+      <workItem from="1599385914007" duration="12488000" />
+      <workItem from="1599398759621" duration="1789000" />
+      <workItem from="1599430289973" duration="452000" />
+      <workItem from="1599438736548" duration="599000" />
+      <workItem from="1599484540212" duration="36845000" />
+      <workItem from="1599600224165" duration="17628000" />
+      <workItem from="1599717334794" duration="8886000" />
+      <workItem from="1599734234311" duration="701000" />
+      <workItem from="1599749730489" duration="19000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96072000" />
-  </component>
-  <component name="TodoView" selected-index="1">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-      <is-preview-enabled value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="3" y="23" width="1360" height="742" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" x="257" y="92" width="196" height="676" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.11102941" />
-      <window_info id="Structure" order="1" weight="0.18655589" />
-      <window_info id="Favorites" order="2" weight="0.32869694" />
-      <window_info id="Designer" order="3" />
-      <window_info id="Image Layers" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Resources Explorer" order="7" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Database Changes" order="2" weight="0.32854864" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32535884" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.33534744" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.39814815" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="8" weight="0.32842416" />
-      <window_info anchor="bottom" id="Application Servers" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Problems" order="11" />
-      <window_info anchor="bottom" id="Changes" order="12" />
-      <window_info anchor="bottom" id="Profiler" order="13" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="14" visible="true" weight="0.3247734" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.31873113" />
-      <window_info anchor="bottom" id="Terminal" order="16" />
-      <window_info anchor="bottom" id="Inspection Results" order="17" weight="0.32988167" />
-      <window_info anchor="bottom" id="Database Console" order="18" weight="0.32854864" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="JetGradle" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.028231798" />
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Google Cloud Storage" order="9" />
-      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32869694" />
-      <window_info anchor="right" id="Maven Projects" order="11" weight="0.32930514" />
-      <window_info anchor="right" id="Maven" order="12" />
-      <window_info anchor="right" id="Flutter Inspector" order="13" />
-      <window_info anchor="right" id="Flutter Outline" order="14" />
-      <window_info anchor="right" id="Assistant" order="15" weight="0.15882353" />
-      <window_info anchor="right" id="Flutter Performance" order="16" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="309" y="47" key="#Inspections" timestamp="1598700978713">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="309" y="47" key="#Inspections/0.0.1366.738@0.0.1366.738" timestamp="1598700978713" />
+    <state x="435" y="192" key="#Notifications" timestamp="1596891414500">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="435" y="192" key="#Notifications/0.0.1366.738@0.0.1366.738" timestamp="1596891414500" />
+    <state x="163" y="0" key="#Project_Structure" timestamp="1595927244262">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="163" y="0" key="#Project_Structure/0.0.1366.738@0.0.1366.738" timestamp="1595927244262" />
+    <state x="275" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599389320384">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1599389320384" />
+    <state x="434" y="170" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599386172754">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="434" y="170" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1599386172754" />
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1599717789159">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1599717789159" />
+    <state x="413" y="151" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1595716437412">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="151" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1595716437412" />
+    <state x="363" y="104" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1598740291597">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="363" y="104" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.738@0.0.1366.738" timestamp="1598740291597" />
+    <state x="484" y="282" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1595927914957">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="484" y="282" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.738@0.0.1366.738" timestamp="1595927914957" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599514437534">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1599514437534" />
+    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599609867983">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1599609867983" />
+    <state x="413" y="115" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1596913697243">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="115" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.738@0.0.1366.738" timestamp="1596913697243" />
+    <state width="445" height="466" key="DebuggerActiveHint" timestamp="1599214548928">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="445" height="466" key="DebuggerActiveHint/0.0.1366.738@0.0.1366.738" timestamp="1599214548928" />
+    <state x="129" y="55" key="DiffContextDialog" timestamp="1595936568000">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="129" y="55" key="DiffContextDialog/0.0.1366.738@0.0.1366.738" timestamp="1595936568000" />
+    <state x="463" y="114" key="FileChooserDialogImpl" timestamp="1599749748459">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="114" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1599749748459" />
+    <state x="0" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1595936589361">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="0" y="0" key="FileDocumentManager.FileCacheConflict/0.0.1366.738@0.0.1366.738" timestamp="1595936589361" />
+    <state width="1323" height="127" key="GridCell.Tab.0.bottom" timestamp="1599734187448">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="127" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1599734187448" />
+    <state width="1323" height="127" key="GridCell.Tab.0.center" timestamp="1599734187448">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="127" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1599734187448" />
+    <state width="1323" height="127" key="GridCell.Tab.0.left" timestamp="1599734187448">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="127" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1599734187448" />
+    <state width="1323" height="127" key="GridCell.Tab.0.right" timestamp="1599734187448">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="127" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1599734187448" />
+    <state width="1322" height="218" key="GridCell.Tab.1.bottom" timestamp="1599625325935">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="218" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1599625325935" />
+    <state width="1322" height="218" key="GridCell.Tab.1.center" timestamp="1599625325935">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="218" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1599625325935" />
+    <state width="1322" height="218" key="GridCell.Tab.1.left" timestamp="1599625325935">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="218" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1599625325935" />
+    <state width="1322" height="218" key="GridCell.Tab.1.right" timestamp="1599625325935">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1322" height="218" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1599625325935" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1599342109208">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.738@0.0.1366.738" timestamp="1599342109208" />
+    <state x="263" y="103" key="IDE.errors.dialog" timestamp="1599399064510">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="263" y="103" key="IDE.errors.dialog/0.0.1366.738@0.0.1366.738" timestamp="1599399064510" />
+    <state x="186" y="0" key="SettingsEditor" timestamp="1599718445886">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="186" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1599718445886" />
+    <state x="565" y="256" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1599717483435">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="565" y="256" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.738@0.0.1366.738" timestamp="1599717483435" />
+    <state x="533" y="130" width="300" height="140" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog" timestamp="1599389726392">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="533" y="130" width="300" height="140" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog/0.0.1366.738@0.0.1366.738" timestamp="1599389726392" />
+    <state x="263" y="23" key="com.intellij.database.dbimport.ImportDialog" timestamp="1599323661853">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="263" y="23" key="com.intellij.database.dbimport.ImportDialog/0.0.1366.738@0.0.1366.738" timestamp="1599323661853" />
+    <state x="479" y="189" width="408" height="352" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1599717608423">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="479" y="189" width="408" height="352" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1366.738@0.0.1366.738" timestamp="1599717608423" />
+    <state x="403" y="242" width="532" height="455" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599717675396">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="403" y="242" width="532" height="455" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1599717675396" />
+    <state x="500" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599392412973">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="500" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1599392412973" />
+    <state x="413" y="132" key="extract.method.dialog" timestamp="1595601933208">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="132" key="extract.method.dialog/0.0.1366.738@0.0.1366.738" timestamp="1595601933208" />
+    <state x="65" y="0" key="new project wizard" timestamp="1599247422042">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.738@0.0.1366.738" timestamp="1599247422042" />
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup" timestamp="1599525509576">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1599525509576" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1598771225926">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1598771225926" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar:///usr/lib/jvm/java-8-openjdk/jre/lib/ext/jfxrt.jar!/javafx/fxml/Initializable.class</url>
-          <properties />
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/Ui/Enrollment/EnrollstudentController.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="112" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Model.Student" memberName="email" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/fontawesomefx-fontawesome-4.7.0-1.jar!/de/jensd/fx/glyphs/fontawesome/demo/FontTestFX.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/fontawesomefx-fontawesome-4.7.0-1.jar!/de/jensd/fx/glyphs/fontawesome/demo/FontAwesomeIconsDemoApp.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/fontawesomefx-8.9.jar!/de/jensd/fx/glyphs/weathericons/WeatherIcon.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12202">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/ext/jfxrt.jar!/com/sun/javafx/scene/control/skin/ComboBoxListViewSkin.class" />
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/util/function/Predicate.class" />
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/ext/jfxrt.jar!/javafx/fxml/Initializable.class" />
-    <entry file="file://$PROJECT_DIR$/src/Dashboard/Dashboard.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Attendance Final.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/PersonDB.db">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dbConnection/Manager.java" />
-    <entry file="uml://JAVA/AboutApp" />
-    <entry file="uml://JAVA/Classes.Person" />
-    <entry file="file://$PROJECT_DIR$/src/Login/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties" />
-    <entry file="file://$PROJECT_DIR$/src/StyleCheet/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AboutApp/AboutAppController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="44" lean-forward="true" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/ext/jfxrt.jar!/javafx/beans/value/ChangeListener.class" />
-    <entry file="file://$PROJECT_DIR$/src/Login/Login.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="58" column="19" lean-forward="true" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/lang/Thread.class" />
-    <entry file="file://$PROJECT_DIR$/src/Sidebar/Sidebar.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3f3abf20-74da-4637-9f0e-7a7df63aff81/collation/RTRIM" />
-    <entry file="das://3f3abf20-74da-4637-9f0e-7a7df63aff81/collation/BINARY" />
-    <entry file="das://3f3abf20-74da-4637-9f0e-7a7df63aff81/collation/NOCASE" />
-    <entry file="das://3f3abf20-74da-4637-9f0e-7a7df63aff81/schema/main/table/sqlite_master" />
-    <entry file="das://3f3abf20-74da-4637-9f0e-7a7df63aff81/schema/main/table/Settings.sql" />
-    <entry file="uml://DATABASE/3f3abf20-74da-4637-9f0e-7a7df63aff81.TABLE:main.1625897" />
-    <entry file="das://3f3abf20-74da-4637-9f0e-7a7df63aff81/schema/main/table/12345" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3f3abf20-74da-4637-9f0e-7a7df63aff81/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/Attendance/Attendance.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="30" column="126" selection-start-line="30" selection-start-column="126" selection-end-line="30" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3f3abf20-74da-4637-9f0e-7a7df63aff81/schema/main/table/Teachers" />
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/ext/jfxrt.jar!/javafx/fxml/FXMLLoader.class" />
-    <entry file="file://$PROJECT_DIR$/src/Sidebar/SidebarController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="101" column="12" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3f3abf20-74da-4637-9f0e-7a7df63aff81/schema/main/table/CSC1103" />
-    <entry file="file://$PROJECT_DIR$/src/Dashboard/DashboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dbConnection/Connect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AboutLecturer/AboutLecturerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/ext/jfxrt.jar!/javafx/event/EventHandler.class" />
-    <entry file="das://3f3abf20-74da-4637-9f0e-7a7df63aff81/schema/main/table/1625897" />
-    <entry file="file://$PROJECT_DIR$/src/Classes/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#851#852#0" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#970#971#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1032#1033#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1112#1113#0" expanded="true" />
-            <element signature="e#1148#1149#0" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
-            <element signature="e#1225#1226#0" expanded="true" />
-            <element signature="e#1274#1275#0" expanded="true" />
-            <element signature="e#1311#1312#0" expanded="true" />
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1396#1397#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/List/ListController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3297">
-          <caret line="183" column="21" selection-start-line="183" selection-start-column="21" selection-end-line="183" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Login/LoginModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="26" column="88" selection-start-line="26" selection-start-column="88" selection-end-line="26" selection-end-column="88" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Login/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/List/List.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3f3abf20-74da-4637-9f0e-7a7df63aff81/schema/main/table/Settings" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dbConnection/Operations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Settings/Settings.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Settings/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Attendance/AttendanceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>Attendance Final</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>lib</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Attendance Final</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>com.calendarfx:view:8.5.0</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/student_attendance_system$Main.ic" NAME="Main Coverage Results" MODIFIED="1599721164970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Ui.Login.*</FILTER>
+    </SUITE>
   </component>
 </project>

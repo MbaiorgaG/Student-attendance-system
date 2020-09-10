@@ -1,8 +1,8 @@
 package dbConnection;
 
-import Classes.Student;
-import Classes.Teacher;
-import Login.LoginModel;
+import Model.Student;
+import Model.Teacher;
+import Ui.Login.LoginModel;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.ObservableList;
@@ -22,18 +22,21 @@ public class Operations {
             filteredList.setPredicate(student -> {
                 if (newValue == null || newValue.isEmpty()) return true;
                 String word = newValue.toLowerCase();
-                if (student.getID() != 0) { // to ignore empty fields (otherwise its a NullPointer ma dude)
-                    if (String.valueOf(student.getID()).toLowerCase().contains(word)) return true;
+                if (student.getMatricNo() != null) { // to ignore empty fields (otherwise its a NullPointer ma dude)
+                    if (String.valueOf(student.getMatricNo()).toLowerCase().contains(word)) return true;
                 }
-                if (student.getName() != null) { // to ignore empty fields (otherwise its a NullPointer ma dude)
-                    if (student.getName().toLowerCase().contains(word)) return true;
+
+                if (student.getFullname() != null) {
+                    if (student.getFullname().toLowerCase().contains(word)) return true;
                 }
-                if (student.getAbsences() != null) { // to ignore empty fields (otherwise its a NullPointer ma dude)
-                    if (student.getAbsences().toLowerCase().contains(word)) return true;
-                }
-                if (student.getBar_status() != null) { // to ignore empty fields (otherwise its a NullPointer ma dude)
-                    if (student.getBar_status().toLowerCase().contains(word)) return true;
-                }
+
+//
+//                if (student.getAbsences() != null) { // to ignore empty fields (otherwise its a NullPointer ma dude)
+//                    if (student.getAbsences().toLowerCase().contains(word)) return true;
+//                }
+//                if (student.getBar_status() != null) { // to ignore empty fields (otherwise its a NullPointer ma dude)
+//                    if (student.getBar_status().toLowerCase().contains(word)) return true;
+//                }
                 if (student.getEmail() != null) { // to ignore empty fields (otherwise its a NullPointer ma dude)
                     return student.getEmail().toLowerCase().contains(word);
                 }
@@ -51,17 +54,28 @@ public class Operations {
         list_table.setItems(students); // surpass the error when the observable list being used is the filtered one
         list_table.getItems().clear(); // clear table content before adding them again
         String selectedItem;
-        if (!diff.equals("")) selectedItem = diff + "," + subjs.getSelectionModel().getSelectedItem();
+        if (!diff.equals("")) selectedItem = diff + "," +
+                subjs.getSelectionModel().getSelectedItem();
         else selectedItem = subjs.getSelectionModel().getSelectedItem();
         checkConn(); // check connection
 
-        String st = "select * from '" + logged.getID() + "' where subjects like " + "'%" + selectedItem + "%'";
+        String st = "select * from '" + logged.getTeacher_id() +
+                "' where subjects like " +
+                "'%" + selectedItem + "%'";
         ResultSet rs = Objects.requireNonNull(conns).createStatement().executeQuery(st);
         while (rs.next()) {
             // store each row in a student object
-            students.add(new Student(rs.getInt("ID"), rs.getString("name"),
-                    rs.getString("gender"), rs.getString("email"), rs.getString("absences"),
-                    rs.getString("bar"), parseSubjs(rs), rs.getBoolean("present"), rs.getString("excuse")));
+//            students.add(new Student(
+//                    rs.getInt("ID"),
+//                    rs.getString("first_name"),
+//                    rs.getString("last_name"),
+//                    rs.getString("gender"),
+//                    rs.getString("email"),
+//                    rs.getString("absences"),
+//                    rs.getString("bar"),
+//                    parseSubjs(rs),
+//                    rs.getBoolean("present"),
+//                    rs.getString("excuse")));
 
         }
     }
@@ -71,13 +85,21 @@ public class Operations {
         try {
             checkConn(); // check connection
             Teacher logged = LoginModel.getLogged();
-            String query = "select * from '" + logged.getID() + "'";
+            String query = "select * from '" + logged.getTeacher_id() + "'";
             ResultSet rs = Objects.requireNonNull(conns).prepareStatement(query).executeQuery();
             while (rs.next()) {
                 // store each row in a student object
-                students.add(new Student(rs.getInt("ID"), rs.getString("name"),
-                        rs.getString("gender"), rs.getString("email"), rs.getString("absences"),
-                        rs.getString("bar"), parseSubjs(rs), rs.getBoolean("present"), rs.getString("excuse")));
+//                students.add(new Student(
+//                        rs.getInt("ID"),
+//                        rs.getString("first_name"),
+//                        rs.getString("last_name"),
+//                        rs.getString("gender"),
+//                        rs.getString("email"),
+//                        rs.getString("absences"),
+//                        rs.getString("bar"),
+//                        parseSubjs(rs),
+//                        rs.getBoolean("present"),
+//                        rs.getString("excuse")));
             }
             rs.close(); // close statement
             conns.close(); // close connection for now
@@ -86,42 +108,41 @@ public class Operations {
         }
     }
 
-    public static Map<String, String[]> parseSubjs(ResultSet resultSet) throws SQLException {
-        String[] subjs = resultSet.getString("subjects").split("( )");
-        String[][] sections = new String[subjs.length][];
-        Map<String, String[]> subjects = new HashMap<>();
+    public static List<String> parseSubjs(ResultSet resultSet) throws SQLException {
+        String[] subjs = resultSet.getString("course").split("( )");
+        List<String> subjects = new ArrayList<>();
         for (int i = 0; i < subjs.length; i++) {
             subjs[i] = subjs[i].replace("(", "");
             subjs[i] = subjs[i].replace(")", "");
-            sections[i] = subjs[i].split(",");
-        }
-        for (int i = 0; i < sections.length; i++) {
-            String[] finale = Arrays.copyOfRange(sections[i], 1, sections[i].length);
-            subjects.put(subjs[i].split(",")[0], finale);
         }
         return subjects;
     }
 
-    public static void DropFilter(JFXComboBox source, JFXComboBox<String> section, JFXComboBox<String> subjs,
-                                  TableView<Student> list_table, ObservableList<Student> students, Teacher logged) throws SQLException {
-        if (source.getId().equals("subjs")) {
-            section.getItems().clear();
-            section.getSelectionModel().clearSelection();
-            if (subjs.getSelectionModel().getSelectedItem().contains("All")) {
-                LoadData(list_table, students); // load regular view
-                section.setDisable(true);
-                return; // terminate the method.
-            }
-            section.setDisable(false);
-            Map<String, String[]> secs = logged.getSubjects();
-            String[] sec = secs.get(subjs.getSelectionModel().getSelectedItem());
-            for (String s : sec) {
-                section.getItems().add(s);
-            }
-            FilterClass(list_table, students, subjs, "");
-        } else if (source.getId().equals("section")){
-            FilterClass(list_table, students, section, subjs.getSelectionModel().getSelectedItem());
-        }
+    public static void DropFilter(JFXComboBox source,
+                                  JFXComboBox<String> section,
+                                  JFXComboBox<String> subjs,
+                                  TableView<Student> list_table,
+                                  ObservableList<Student> students,
+                                  Teacher logged) throws SQLException {
+//        if (source.getId().equals("subjs")) {
+//            section.getItems().clear();
+//            section.getSelectionModel().clearSelection();
+//            if (subjs.getSelectionModel().getSelectedItem().contains("All")) {
+//                LoadData(list_table, students); // load regular view
+//                section.setDisable(true);
+//                return; // terminate the method.
+//            }
+//            section.setDisable(false);
+//            List<String> secs = logged.getSubjects();
+//            String[] sec = secs.get(subjs.getSelectionModel().getSelectedItem());
+//            for (String s : sec) {
+//                section.getItems().add(s);
+//            }
+//            FilterClass(list_table, students, subjs, "");
+//        } else if (source.getId().equals("section")){
+//            FilterClass(list_table, students, section,
+//                    subjs.getSelectionModel().getSelectedItem());
+//        }
     }
 
     private static void checkConn() {
