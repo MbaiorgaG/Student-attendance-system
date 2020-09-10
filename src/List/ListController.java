@@ -120,17 +120,17 @@ public class ListController implements Initializable {
         list_table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         //initialize the drop down menu
         subjs.getItems().add("All");
-        List<String> subs = logged.getSubjects();
-        for (String name: subs){
-            subjs.getItems().add(name);
-        }
+//        List<String> subs = logged.getSubjects();
+//        for (String name: subs){
+//            subjs.getItems().add(name);
+//        }
         subjs.getSelectionModel().selectFirst();
     }
 
     @FXML
     void addRow() { // add new student
         checkConn();
-        String query = "insert into '" + logged.getID() + "' (ID, name, email, absences, bar, subjects) values(?, ?, ?, ?, ?, ?)";
+        String query = "insert into '" + logged.getTeacher_id() + "' (ID, name, email, absences, bar, subjects) values(?, ?, ?, ?, ?, ?)";
 
         try {
             PreparedStatement pst = Objects.requireNonNull(conns).prepareStatement(query);
@@ -168,13 +168,13 @@ public class ListController implements Initializable {
         Student stud = list_table.getSelectionModel().getSelectedItem(); // get selected item
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Delete Record");
-        alert.setHeaderText("Are you sure You want to delete record with ID: " + stud.getID() + "?");
+        alert.setHeaderText("Are you sure You want to delete record with ID: " + stud.getMatricNo() + "?");
         ButtonType Yes = new ButtonType("Yes");
         ButtonType No = new ButtonType("No");
         alert.getButtonTypes().setAll(Yes, No);
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == Yes) {
-            String query = String.format("delete from '" + logged.getID() + "' where id=%d", stud.getID());
+            String query = String.format("delete from '" + logged.getTeacher_id() + "' where id=%d", stud.getMatricNo());
             try {
 
                 PreparedStatement pst = Objects.requireNonNull(conns).prepareStatement(query);
@@ -190,13 +190,13 @@ public class ListController implements Initializable {
 
     public void updateCol(TableColumn.CellEditEvent edditedcell) {
         Student selected = list_table.getSelectionModel().getSelectedItem(); // get the student being edited right now
-        String query = "update '" + logged.getID() + "' set " +
+        String query = "update '" + logged.getTeacher_id() + "' set " +
                 edditedcell.getTableColumn().getText().toLowerCase().split(" ")[0] + " = ? where id = ?";
         try {
             checkConn(); // check connection
             PreparedStatement pst = Objects.requireNonNull(conns).prepareStatement(query); // sql statement
             pst.setString(1, edditedcell.getNewValue().toString()); // pass the inputted value to be updated in that row
-            pst.setString(2, String.valueOf(selected.getID())); // pass the id of the column that has to be edited
+            pst.setString(2, String.valueOf(selected.getMatricNo())); // pass the id of the column that has to be edited
             pst.execute(); // execute statement
             conns.close(); // close connection for now
         } catch (SQLException e) {

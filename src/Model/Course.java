@@ -7,12 +7,23 @@ public class Course {
     private String coursePrereq;
     private String courseLecturer;
 
+
     public Course(String courseId, String courseTitle, String courseUnit, String coursePrereq, String courseLecturer) {
         this.courseId = courseId;
         this.courseTitle = courseTitle;
         this.courseUnit = courseUnit;
         this.coursePrereq = coursePrereq;
         this.courseLecturer = courseLecturer;
+
+    }
+
+    public Course() {
+
+    }
+
+    public Course(String course_id, String course_title) {
+        this.courseId = course_id;
+        this.courseTitle = course_title;
     }
 
     public String getCourseId() {

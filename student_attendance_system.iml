@@ -8,5 +8,11 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="charm-glisten-4.4.4" level="project" />
+    <orderEntry type="library" name="dpjavapos" level="project" />
+    <orderEntry type="library" name="dpuareu" level="project" />
+    <orderEntry type="library" name="jpos113" level="project" />
+    <orderEntry type="library" name="xercesImpl-2.6.2" level="project" />
+    <orderEntry type="library" name="xmlParserAPIs" level="project" />
   </component>
 </module>

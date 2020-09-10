@@ -37,7 +37,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="80.0" spacing="10.0" style="-fx-background-color: #303952;" styleClass="bottom_stats">
                      <children>
-                        <JFXButton fx:id="view_student" onAction="#ViewStudent" text="View Student" textFill="#dddbdb">
+                        <JFXButton fx:id="view_student" onAction="#ViewStudent" text="View All Student" textFill="#dddbdb">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -92,7 +92,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="80.0" spacing="10.0" style="-fx-background-color: #303952;" styleClass="bottom_stats">
                      <children>
-                        <JFXButton fx:id="view__course" onAction="#viewCourse" text="View Course" textFill="#dddbdb">
+                        <JFXButton fx:id="view__course" onAction="#viewCourse" text="View All Lecturers" textFill="#dddbdb">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -109,7 +109,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="80.0" spacing="10.0" style="-fx-background-color: #303952;" styleClass="bottom_stats">
                      <children>
-                        <JFXButton fx:id="view_report" onAction="#report" text="Report" textFill="#dddbdb">
+                        <JFXButton fx:id="view_report" onAction="#report" text="Student Attendance Report" textFill="#dddbdb">
                            <font>
                               <Font size="18.0" />
                            </font>

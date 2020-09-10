@@ -6,11 +6,9 @@
 <?import com.jfoenix.controls.JFXSnackbar?>
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -23,15 +21,6 @@
     <children>
         <AnchorPane id="AnchorPane" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="593.0" style="-fx-background-color: white;">
             <children>
-                <HBox layoutX="14.0" layoutY="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
-                    <children>
-                        <JFXButton style="-fx-background-color: white;" visible="false">
-                            <graphic>
-                                <MaterialIconView glyphName="SEARCH" size="20" />
-                            </graphic>
-                        </JFXButton>
-                    </children>
-                </HBox>
                 <JFXTabPane layoutX="33.0" layoutY="75.0" prefHeight="0.0" prefWidth="525.0" style="-fx-background-insets: 12; -fx-border-style: solid; -fx-border-color: grey; -fx-border-width: 2;" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="70.0">
                     <tabs>
                         <Tab text="Biodata">
@@ -84,7 +73,7 @@
                                                         <Font name="FontAwesome Regular" size="14.0" />
                                                     </font>
                                                 </Label>
-                                                <Label layoutX="10.0" layoutY="240.0" text="Phone number:" GridPane.rowIndex="6">
+                                                <Label layoutX="10.0" layoutY="240.0" text="Select course" GridPane.rowIndex="6">
                                                     <font>
                                                         <Font name="FontAwesome Regular" size="14.0" />
                                                     </font>
@@ -100,8 +89,8 @@
                                     <JFXTextField fx:id="department" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                     <JFXComboBox fx:id="sex" prefHeight="25.0" prefWidth="255.0" promptText="Select Gender" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                     <JFXDatePicker fx:id="dob" prefHeight="25.0" prefWidth="269.0" promptText="Date of Birth" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                    <JFXTextField fx:id="phone" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                                     <JFXComboBox fx:id="levelofstudy" prefHeight="25.0" prefWidth="256.0" promptText="Level" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <JFXComboBox fx:id="select_course" prefHeight="28.0" prefWidth="257.0" promptText="Select course" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                                             </children>
                                         </GridPane>
                                     </children>
@@ -112,22 +101,13 @@
                             <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                     <children>
-                                        <AnchorPane layoutX="159.0" layoutY="14.0" style="-fx-border-color: black;">
-                                            <children>
-                                                <ImageView fx:id="fingerprint" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-insets: 2; -fx-border-size: 2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                            </children>
-                                        </AnchorPane>
-                                        <HBox layoutX="88.0" layoutY="187.0" spacing="20.0">
+                                        <AnchorPane layoutX="38.0" layoutY="14.0" style="-fx-border-color: black;" />
+                                        <HBox layoutX="148.0" layoutY="167.0" prefHeight="47.0" prefWidth="282.0" spacing="20.0">
                                             <children>
                                                 <JFXButton fx:id="take_button" buttonType="RAISED" onAction="#verifyFinger" prefHeight="21.0" prefWidth="132.0" style="-fx-background-color: white;" text="Take" />
                                                 <JFXButton fx:id="re_take_button" buttonType="RAISED" onAction="#deletePrint" prefHeight="17.0" prefWidth="143.0" style="-fx-background-color: white;" text="Re- take" />
                                             </children>
                                         </HBox>
-                                        <Label fx:id="flabel" alignment="CENTER" layoutX="326.0" layoutY="64.0" prefHeight="19.0" prefWidth="110.0" text="Accepted!" textAlignment="CENTER" textFill="#2c2828">
-                                            <font>
-                                                <Font size="14.0" />
-                                            </font>
-                                        </Label>
                                     </children>
                                 </AnchorPane>
                             </content>

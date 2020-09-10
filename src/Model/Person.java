@@ -6,40 +6,21 @@ import java.util.List;
 import java.util.Map;
 
 // i dont think this needs any comments
-public class Person {
-    String firstName;
-    String lastName;
-    int ID;
+public class Person extends Attendance {
+    String fullname;
     String gender;
     String email;
     long phone;
-    List<String> subjects = new ArrayList<>();
 
     Person() {
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
     public String getGender() {
@@ -66,11 +47,4 @@ public class Person {
         this.phone = phone;
     }
 
-    public List<String> getSubjects() {
-        return subjects;
-    }
-
-    public void setSubjects(List<String> subjects) {
-        this.subjects = subjects;
-    }
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ui.StudentReport.StudentAttendanceReportController">
+    <children>
+        <HBox spacing="10.0">
+            <children>
+                <Label fx:id="lecturer_name" prefHeight="31.0" prefWidth="338.0" text="Course Lecturer's Name">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <JFXComboBox fx:id="course" maxHeight="1.7976931348623157E308" maxWidth="200.0" onAction="#select_course" promptText="Select Subject" HBox.hgrow="ALWAYS" />
+            </children>
+        </HBox>
+        <TableView fx:id="list_table" stylesheets="@../StyleCheet/style.css" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="matric_col" maxWidth="200.0" minWidth="100.0" prefWidth="179.0" text="MATRICULATION  NUMBER" />
+                <TableColumn fx:id="name_col" maxWidth="400.0" minWidth="170.0" prefWidth="170.0" text="NAME" />
+                <TableColumn fx:id="attendance_col" maxWidth="141.0" minWidth="90.0" prefWidth="141.0" text="TOTAL ATTENDANCE" />
+            </columns>
+        </TableView>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</VBox>

@@ -25,7 +25,7 @@ public class AboutAppController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        final String[] URLs = {"https://github.com/Blacksuan19", "https://github.com/jfoenixadmin/JFoenix",
+        final String[] URLs = {"", "https://github.com/jfoenixadmin/JFoenix",
                 "https://bitbucket.org/Jerady/fontawesomefx", "https://github.com/controlsfx/controlsfx"};
 
         // disable the stupid focus hint

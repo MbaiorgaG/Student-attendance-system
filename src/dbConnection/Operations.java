@@ -22,16 +22,14 @@ public class Operations {
             filteredList.setPredicate(student -> {
                 if (newValue == null || newValue.isEmpty()) return true;
                 String word = newValue.toLowerCase();
-                if (student.getID() != 0) { // to ignore empty fields (otherwise its a NullPointer ma dude)
-                    if (String.valueOf(student.getID()).toLowerCase().contains(word)) return true;
+                if (student.getMatricNo() != null) { // to ignore empty fields (otherwise its a NullPointer ma dude)
+                    if (String.valueOf(student.getMatricNo()).toLowerCase().contains(word)) return true;
                 }
 
-                if (student.getFirstName() != null) {
-                    if (student.getFirstName().toLowerCase().contains(word)) return true;
+                if (student.getFullname() != null) {
+                    if (student.getFullname().toLowerCase().contains(word)) return true;
                 }
-                if (student.getLastName() != null) {
-                    if (student.getLastName().toLowerCase().contains(word)) return true;
-                }
+
 //
 //                if (student.getAbsences() != null) { // to ignore empty fields (otherwise its a NullPointer ma dude)
 //                    if (student.getAbsences().toLowerCase().contains(word)) return true;
@@ -61,7 +59,7 @@ public class Operations {
         else selectedItem = subjs.getSelectionModel().getSelectedItem();
         checkConn(); // check connection
 
-        String st = "select * from '" + logged.getID() +
+        String st = "select * from '" + logged.getTeacher_id() +
                 "' where subjects like " +
                 "'%" + selectedItem + "%'";
         ResultSet rs = Objects.requireNonNull(conns).createStatement().executeQuery(st);
@@ -87,7 +85,7 @@ public class Operations {
         try {
             checkConn(); // check connection
             Teacher logged = LoginModel.getLogged();
-            String query = "select * from '" + logged.getID() + "'";
+            String query = "select * from '" + logged.getTeacher_id() + "'";
             ResultSet rs = Objects.requireNonNull(conns).prepareStatement(query).executeQuery();
             while (rs.next()) {
                 // store each row in a student object

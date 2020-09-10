@@ -69,9 +69,9 @@ public class SidebarController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        String name = teacher.getFirstName() + " " + teacher.getLastName();
+        String name = teacher.getFullname();
 
-        UserName.setText(teacher.getXP() + " " + name.toUpperCase());
+        UserName.setText(name.toUpperCase());
     }
 
     @FXML

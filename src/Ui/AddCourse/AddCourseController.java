@@ -41,7 +41,7 @@ public class AddCourseController implements Initializable {
     private JFXComboBox<String> coursePrereqBox;
 
     @FXML
-    private JFXComboBox<String> courseLectBox;
+    private JFXComboBox<Teacher> courseLectBox;
 
     @FXML
     private AnchorPane mainContainer;
@@ -79,21 +79,23 @@ public class AddCourseController implements Initializable {
         setUpCourseLecturer();
     }
 
-    private JFXComboBox<String> setUpCourseLecturer() {
+    private JFXComboBox<Teacher> setUpCourseLecturer() {
         courseLectBox.setPromptText("Select Course Lecturer");
         courseLectBox.setLabelFloat(false);
-        List<String> list = FXCollections.observableArrayList();
-        loadLect(list);
-        ObservableList<String> courseOList = FXCollections.observableArrayList(list);
+        List<Teacher> list;
+        list = getTeacherInfo(loadLect());
+        ObservableList<Teacher> courseOList = FXCollections.observableArrayList(list);
         courseLectBox.setItems(courseOList);
         return courseLectBox;
     }
+
+
 
     private JFXComboBox<String> setUpCoursePrereq() {
         coursePrereqBox.setPromptText("Select Course Prerequisite");
         coursePrereqBox.setLabelFloat(false);
         //Retrieve courses from table
-        List<String> coursePrereq = Arrays.asList("Physics", "English", "Chemistry", "math");
+        List<String> coursePrereq = Arrays.asList("Physics","Geography", "English", "Chemistry", "Mathematics");
         ObservableList<String> courseOList = FXCollections.observableArrayList(coursePrereq);
         coursePrereqBox.setItems(courseOList);
         return coursePrereqBox;
@@ -102,7 +104,7 @@ public class AddCourseController implements Initializable {
     private JFXComboBox<String> setUpCourseUnit() {
         courseUnitBox.setPromptText("Select Course Unit");
         courseUnitBox.setLabelFloat(true);
-        List<String> courseUnit = Arrays.asList("1", "2", "3", "4");
+        List<String> courseUnit = Arrays.asList("1", "2", "3", "4","5");
         ObservableList<String> courseOList = FXCollections.observableArrayList(courseUnit);
         courseUnitBox.setItems(courseOList);
         return courseUnitBox;
@@ -142,12 +144,13 @@ public class AddCourseController implements Initializable {
     }
 
     @FXML
-    void save(ActionEvent event) {
+    void save(ActionEvent event) throws SQLException {
         String courseID = courseCode.getText();
         String courseTitle = courseTitleText.getText();
         boolean isUnitSelected = courseUnitBox.getSelectionModel().isEmpty();
         boolean isPrereqSelected = coursePrereqBox.getSelectionModel().isEmpty();
         boolean isLecturereSelected = courseLectBox.getSelectionModel().isEmpty();
+
 
 
         if (courseID.isEmpty()) {
@@ -182,8 +185,13 @@ public class AddCourseController implements Initializable {
             return;
         }
 
+        String teacher_value = String.valueOf(courseLectBox.getValue());
+        String teacher_id = getTeacherId(teacher_value);
+
+
+
         Course course = new Course(courseID, courseTitle, courseUnitBox.getValue(),
-                coursePrereqBox.getValue(), courseLectBox.getValue());
+                coursePrereqBox.getValue(), teacher_id);
 
         boolean result = DataHelper.insertNewCourse(course);
         if (!result) {
@@ -197,6 +205,30 @@ public class AddCourseController implements Initializable {
         }
 
     }
+    private String getTeacherId(String tt) throws SQLException {
+        String id = null;
+        ResultSet rs = null;
+        try {
+            String sql = "SELECT teacher_id FROM Teachers WHERE teacher_name='"+tt+"'";
+            PreparedStatement stmt = Objects.requireNonNull(dbConnection).prepareStatement(sql);
+             rs = stmt.executeQuery();
+            id = rs.getString("teacher_id");
+            return id;
+
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Invalid Student");
+            alert.setHeaderText("Student dose not exist in the department!");
+            alert.show();
+        }finally {
+            rs.close();
+        }
+        return id;
+    }
 
     private void clearEntries() {
         courseTitleText.clear();
@@ -206,20 +238,17 @@ public class AddCourseController implements Initializable {
         courseLectBox.getSelectionModel().clearSelection();
     }
 
-    private List loadLect(List<String> list) {
-        list.clear();
+    private List<Teacher> loadLect() {
+       List<Teacher> teacher = new ArrayList<>();
         try {
             String query = "SELECT * FROM Teachers";
             PreparedStatement stmt = Objects.requireNonNull(dbConnection).prepareStatement(query);
             ResultSet rs = stmt.executeQuery();
-            while (rs.next()) {
-                String exp = rs.getString("experience");
-                String Fname = rs.getString("first_name");
-                String Lname = rs.getString("last_name");
-
-                String lecturer = exp + " " + Fname + " " + Lname;
-                list.add(lecturer);
+            while (rs.next()){
+                teacher.add(new Teacher(rs.getString("teacher_id"),
+                        rs.getString("teacher_name")));
             }
+            getTeacherInfo(teacher);
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -229,7 +258,15 @@ public class AddCourseController implements Initializable {
             alert.setHeaderText("There are no lecturers in the department!");
             alert.show();
         }
-        return list;
+        return teacher;
+    }
+
+    private List getTeacherInfo(List<Teacher> teacher) {
+        List<String>  details = new ArrayList<>();
+        for(Teacher item:teacher){
+            details.add(item.getFullname());
+        }
+        return details;
     }
 
 }

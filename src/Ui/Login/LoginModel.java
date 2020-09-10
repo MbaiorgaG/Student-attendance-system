@@ -2,13 +2,12 @@ package Ui.Login;
 
 import Model.Teacher;
 import dbConnection.Connect;
-import dbConnection.Operations;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.*;
+import java.util.Objects;
 
 public class LoginModel {
     private static Teacher logged; // new teacher to store the logged one in
@@ -23,14 +22,11 @@ public class LoginModel {
         // store the logged in user details in an object for later use
 
         logged = new Teacher(
-                set.getString("first_name"),
-                set.getString("last_name"),
+                set.getString("teacher_id"),
+                set.getString("teacher_name"),
                 set.getString("password"),
-                set.getInt("id"),
                 set.getString("gender"),
                 set.getString("email"),
-                Operations.parseSubjs(set),
-                set.getString("experience"),
                 set.getLong("phone"),
                 set.getString("department"));
     }

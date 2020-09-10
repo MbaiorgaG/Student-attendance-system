@@ -15,7 +15,7 @@ public class Connect {
             otherwise this app is ready to be shipped and wrapped
             */
             String UrlInit = "jdbc:sqlite:"; // constant, the rest is the file directory which will be changed on each extract
-            String dbUrl = "Database/PersonDB.db";
+            String dbUrl = "Database/Person_db.db";
             return DriverManager.getConnection(UrlInit + dbUrl);
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();

@@ -31,12 +31,12 @@ public class WelcomeDashboardController implements Initializable {
 
     @FXML
     public void viewCourse(ActionEvent actionEvent) {
-        StudentAttendanceUtils.loadWindow(getClass().getResource("/Ui/ViewCourse/ViewCourse.fxml"), "View Course", null);
+        StudentAttendanceUtils.loadWindow(getClass().getResource("/Ui/ViewLecturers/ViewAllLecturers.fxml"), "View All Lecturers", null);
     }
 
     @FXML
     public void report(ActionEvent actionEvent) {
-        StudentAttendanceUtils.loadWindow(getClass().getResource("/Ui/StudentReport/StudentReport.fxml"), "Student Report", null);
+        StudentAttendanceUtils.loadWindow(getClass().getResource("/Ui/StudentReport/StudentAttendanceReport.fxml"), "Student Attendance Report", null);
     }
 
     @FXML
@@ -46,6 +46,6 @@ public class WelcomeDashboardController implements Initializable {
 
     @FXML
     public void ViewStudent(ActionEvent actionEvent) {
-        StudentAttendanceUtils.loadWindow(getClass().getResource("/Ui/ViewStudent/ViewStudent.fxml"), "View Students", null);
+        StudentAttendanceUtils.loadWindow(getClass().getResource("/Ui/ViewStudent/ViewAllStudent.fxml"), "View All Students", null);
     }
 }

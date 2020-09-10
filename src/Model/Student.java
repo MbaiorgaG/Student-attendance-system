@@ -1,36 +1,44 @@
 package Model;
 
-import java.util.List;
-
 public class Student extends Person {
-    private int absences;
-    private int excuse;
-    private int present;
     private String matricNo;
     private String department;
     private String data_of_birth;
     private String phoneNo;
     private String levelOfStudy;
+    byte[] biometric;
+    private String course_id;
 
-    // a constructor for the students list page
-    public Student(String matricNo, String fname, String lname, String gender,
-                   int absences,List<String> subjects,int present, int excuse, String department,
-                   String data_of_birth, String phoneNo,String levelOfStudy) {
-
+    public Student(String matricNo, String fullname, String gender,String course_id, String department,
+                   String data_of_birth,String levelOfStudy) {
         this.matricNo = matricNo;
-        this.firstName = fname;
-        this.lastName = lname;
+        this.fullname = fullname;
         this.gender = gender;
-        this.absences = absences;
-        this.subjects = subjects;
-        this.present = present;
-        this.excuse = excuse;
         this.department = department;
         this.data_of_birth = data_of_birth;
-        this.phoneNo = phoneNo;
+        this.course_id = course_id;
         this.levelOfStudy = levelOfStudy;
     }
 
+    public Student(String course_id, String matric_no, byte[] biometrics) {
+        this.matricNo = matric_no;
+        this.biometric = biometrics;
+        this.course_id = course_id;
+    }
+
+    public Student(String student_name, String matric_no, String stud_level) {
+        this.fullname = student_name;
+        this.matricNo = matric_no;
+        this.levelOfStudy = stud_level;
+    }
+
+    public String getCourse_id() {
+        return course_id;
+    }
+
+    public void setCourse_id(String course_id) {
+        this.course_id = course_id;
+    }
 
     public String getPhoneNo() {
         return phoneNo;
@@ -46,30 +54,6 @@ public class Student extends Person {
 
     public void setLevelOfStudy(String levelOfStudy) {
         this.levelOfStudy = levelOfStudy;
-    }
-
-    public int getAbsences() {
-        return absences;
-    }
-
-    public void setAbsences(int absences) {
-        this.absences = absences;
-    }
-
-    public int getExcuse() {
-        return excuse;
-    }
-
-    public void setExcuse(int excuse) {
-        this.excuse = excuse;
-    }
-
-    public int getPresent() {
-        return present;
-    }
-
-    public void setPresent(int present) {
-        this.present = present;
     }
 
     public String getMatricNo() {
@@ -96,8 +80,12 @@ public class Student extends Person {
         this.data_of_birth = data_of_birth;
     }
 
-    @Override
-    public List<String> getSubjects() {
-        return super.getSubjects();
+    public byte[] getBiometric() {
+        return biometric;
     }
+
+    public void setBiometric(byte[] biometric) {
+        this.biometric = biometric;
+    }
+
 }

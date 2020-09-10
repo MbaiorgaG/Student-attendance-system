@@ -1,8 +1,12 @@
 package Ui.EnrollStudent;
 
+import Model.Attendance;
+import Model.Course;
 import Model.Student;
+import Ui.Enrollment.UareUSampleJava;
 import Utils.AlertMaker;
 import com.jfoenix.controls.*;
+import dbConnection.Connect;
 import dbConnection.DataHelper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,6 +21,10 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.time.LocalDate;
 import java.util.*;
@@ -49,11 +57,12 @@ public class EnrollStudentController implements Initializable {
     @FXML
     private JFXComboBox<String> sex;
 
+
     @FXML
     private JFXComboBox<String> levelofstudy;
 
     @FXML
-    private ImageView fingerprint;
+    private static ImageView fingerprint;
 
     @FXML
     private JFXButton take_button;
@@ -62,7 +71,7 @@ public class EnrollStudentController implements Initializable {
     private JFXButton re_take_button;
 
     @FXML
-    private Label flabel;
+    private JFXComboBox<Course> select_course;
 
     @FXML
     private JFXButton newButton;
@@ -77,18 +86,110 @@ public class EnrollStudentController implements Initializable {
     private JFXButton closeButton;
 
     @FXML
+    private JFXTimePicker lect_start_time;
+
+    @FXML
+    private JFXTimePicker lect_end_time;
+
+    @FXML
     private Label datalabel;
 
     @FXML
     private JFXSnackbar snackbar;
 
 
+    public static String matric_id;
+    String matricNo;
+    String firstName;
+    String surName;
+    String dept;
+    LocalDate date;
+    UareUSampleJava uareUSampleJava;
+    // get connection
+    private static final Connection dbConnection = Connect.getConnect();
+
+    public static void setMatric_id(String matric_id) {
+        EnrollStudentController.matric_id = matric_id;
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         userGender();
         studentLevel();
+        try {
+            loadCourse();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
+
+
+    private JFXComboBox<Course> loadCourse() throws SQLException {
+        select_course.setPromptText("Select Course Lecturer");
+        select_course.setLabelFloat(false);
+        List<Course> list;
+        list = getCourseId(loadCourseMethod());
+        ObservableList<Course> courseOList = FXCollections.observableArrayList(list);
+        select_course.setItems(courseOList);
+        return select_course;
+    }
+
+    private List<Course> loadCourseMethod() throws SQLException {
+        List<Course> courses = new ArrayList<>();
+        ResultSet rs = null;
+        try {
+            String query = "SELECT * FROM Course";
+            PreparedStatement stmt = Objects.requireNonNull(dbConnection).prepareStatement(query);
+            rs = stmt.executeQuery();
+            while (rs.next()){
+                courses.add(new Course(rs.getString("course_id"),
+                        rs.getString("course_title")));
+            }
+            getCourseId(courses);
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Select Course");
+            alert.setHeaderText("There are no Courses in the department!");
+            alert.show();
+        }finally {
+            rs.close();
+        }
+        return courses;
+    }
+
+    private List getCourseId(List<Course> courses) {
+        List<String>  details = new ArrayList<>();
+        for(Course item:courses){
+            details.add(item.getCourseId());
+        }
+        return details;
+    }
+    private String getCourseTitle(String ss) throws SQLException {
+        String title = null;
+        ResultSet rs = null;
+        try {
+            String sql = "SELECT course_title FROM Course WHERE course_id='"+ss+"'";
+            PreparedStatement stmt = Objects.requireNonNull(dbConnection).prepareStatement(sql);
+            rs = stmt.executeQuery();
+            title = rs.getString("course_title");
+            return title;
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Invalid Course");
+            alert.setHeaderText("Course dose not exist in the department!");
+            alert.show();
+        }finally {
+            rs.close();
+        }
+        return title;
+    }
+
 
     private JFXComboBox<String>  studentLevel() {
         sex.setPromptText("Select Gender");
@@ -111,16 +212,16 @@ public class EnrollStudentController implements Initializable {
         return levelofstudy;
     }
 
-    public void saveNewStuden(ActionEvent actionEvent) throws ParseException {
-        String matricNo = matric.getText();
-        String firstName = firstname.getText();
-        String surName = surname.getText();
-        String dept = department.getText();
-        String phoneNo = phone.getText();
-        LocalDate date = dob.getValue();
+    public void saveNewStuden(ActionEvent actionEvent) throws ParseException, SQLException {
+        matricNo = matric.getText();
+        firstName = firstname.getText();
+        surName = surname.getText();
+        dept = department.getText();
+        date = dob.getValue();
         boolean isSexSelected = sex.getSelectionModel().isEmpty();
         boolean isLevelSelected = levelofstudy.getSelectionModel().isEmpty();
-
+        JFXDatePicker datePicker = new JFXDatePicker(date);
+        String date1 = datePicker.getValue().toString();
         if (matricNo.isEmpty()) {
             AlertMaker.showMaterialDialog(rootPane, root, new ArrayList<>(),
                     "Invalid Matric Number", "Please enter a valid Matric Number.");
@@ -141,9 +242,9 @@ public class EnrollStudentController implements Initializable {
                     "Invalid Department", "Please enter a valid department.");
             return;
         }
-        if (phoneNo.isEmpty()) {
+        if (select_course.getValue() == null) {
             AlertMaker.showMaterialDialog(rootPane, root, new ArrayList<>(),
-                    "Invalid phone number", "Please enter a valid Phone Number.");
+                    "Invalid Course selected", "Please select a valid course.");
             return;
         }
 
@@ -165,24 +266,19 @@ public class EnrollStudentController implements Initializable {
             return;
         }
 
-        //Search the database if the student already exist
-        if (DataHelper.isStudentExists(matricNo)) {
-            AlertMaker.showMaterialDialog(rootPane, root, new ArrayList<>(), "Duplicate Matriculation details",
-                    "This student exist.\nPlease enroll an new student");
-            return;
-        }
 
-        JFXDatePicker datePicker = new JFXDatePicker(date);
-        String date1 = datePicker.getValue().toString();
-
-        captureStudent();
-
+        String course_selected = String.valueOf(select_course.getValue());
+        String level = levelofstudy.getValue();
+        String student_name = firstName+" "+surName;
 
         if(!date1.isEmpty()){
-            Student student = new Student(matricNo,firstName,surName,sex.getValue(),
-                    0,Collections.singletonList("CPT211,CPT112,CPT332,CPT443"),
-                    0,0,
-                   dept,date1,phoneNo,levelofstudy.getValue());
+            //Create a new object of type student
+            Student student = new Student(matricNo,student_name,sex.getValue(),course_selected,
+                   dept,date1,level);
+
+            //Create a new object of type attendance.
+            Attendance attendance = new Attendance(student_name,course_selected,0,level,matricNo);
+            DataHelper.insertNewAttendance(attendance);
 
             boolean result = DataHelper.insertNewStudent(student);
             if (!result) {
@@ -200,21 +296,14 @@ public class EnrollStudentController implements Initializable {
             alert.setHeaderText("Pick a date of Birth");
             alert.show();
         }
-
-
     }
 
-    private void captureStudent() {
-
-
-    }
 
     private void clearEntries() {
             matric.clear();
             firstname.clear();
             surname.clear();
             department.clear();
-            phone.clear();
             levelofstudy.getSelectionModel().clearSelection();
     }
 
@@ -228,7 +317,6 @@ public class EnrollStudentController implements Initializable {
     void doCancel(ActionEvent event) {
         Stage stage = (Stage) rootPane.getScene().getWindow();
         stage.close();
-
     }
 
     @FXML
@@ -238,7 +326,15 @@ public class EnrollStudentController implements Initializable {
 
     @FXML
     void verifyFinger(ActionEvent event) {
-
+        matricNo = matric.getText();
+        if (matricNo.isEmpty()) {
+            AlertMaker.showMaterialDialog(rootPane, root, new ArrayList<>(),
+                    "Invalid Matric Number", "Please enter a valid Matric Number.");
+            return;
+        }
+        setMatric_id(matricNo);
+        uareUSampleJava = new UareUSampleJava();
+        uareUSampleJava.main();
     }
 
 

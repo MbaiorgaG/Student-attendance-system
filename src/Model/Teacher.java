@@ -1,36 +1,47 @@
 package Model;
 
-import java.util.List;
-import java.util.Map;
-
 public class Teacher extends Person {
-    private String Pass; // login password
-    private String XP; // experience (dunno why i called it XP)
+    private String Pass;
     private String department;
+    private String teacher_id;
+    private String course_id;
 
-    public Teacher(String fname, String lname, String pass, int ID, String gender, String email,
-                   List<String> subjects, String XP, long phone, String department) {
-        this.firstName = fname;
-        this.lastName = lname;
+    public Teacher(String teacher_id,String fullname, String pass,  String gender, String email, long phone, String department) {
+        this.teacher_id = teacher_id;
+        this.fullname = fullname;
         Pass = pass;
-        this.ID = ID;
         this.gender = gender;
         this.email = email;
-        this.XP = XP;
-        this.subjects = subjects;
         this.phone = phone;
         this.department = department;
     }
 
-    public Teacher(String exp, String fname, String lname) {
-        this.XP = exp;
-        this.firstName = fname;
-        this.lastName = lname;
+    public Teacher(String teacher_id,String fullname) {
+        this.teacher_id = teacher_id;
+        this.fullname = fullname;
+    }
+
+    public Teacher( String fullname, String teacher_id, String department) {
+        this.fullname = fullname;
+        this.teacher_id = teacher_id;
+        this.department = department;
+    }
+
+    public Teacher(String course_id) {
+        this.course_id = course_id;
     }
 
 
-    public String getXP() {
-        return XP;
+    public String getPass() {
+        return Pass;
+    }
+
+    public String getTeacher_id() {
+        return teacher_id;
+    }
+
+    public String getCourse_id() {
+        return course_id;
     }
 
     public String getDepartment() {

@@ -74,8 +74,8 @@ public class DashboardController implements Initializable {
         checkConn(); // check if connection is available or not
         ResultSet rs = null;
         try {
-            rs = Objects.requireNonNull(conn).createStatement()
-                    .executeQuery(" select count(*) from '" + logged.getID() + "'");
+//            rs = Objects.requireNonNull(conn).createStatement()
+//                    .executeQuery(" select count(*) from '" + logged.getID() + "'");
             return rs.getInt(1);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -95,8 +95,8 @@ public class DashboardController implements Initializable {
         checkConn();
         ResultSet rs = null;
         try {
-            rs = Objects.requireNonNull(conn).createStatement()
-                    .executeQuery(" select count(*) from '" + logged.getID() + "' where bar = 'barred' "); // sql statement
+//            rs = Objects.requireNonNull(conn).createStatement()
+//                    .executeQuery(" select count(*) from '" + logged.getID() + "' where bar = 'barred' "); // sql statement
             return rs.getInt(1); // get the statement output
         } catch (SQLException e) {
             e.printStackTrace();
@@ -116,8 +116,8 @@ public class DashboardController implements Initializable {
         checkConn();
         ResultSet rs = null;
         try {
-            rs = Objects.requireNonNull(conn).createStatement().
-                    executeQuery(" select count(*) from '" + logged.getID() + "' where present = 0"); // sql statement
+//            rs = Objects.requireNonNull(conn).createStatement().
+//                    executeQuery(" select count(*) from '" + logged.getID() + "' where present = 0"); // sql statement
             return rs.getInt(1); // get the statement output
         } catch (SQLException e) {
             e.printStackTrace();
@@ -137,14 +137,14 @@ public class DashboardController implements Initializable {
         String subs; // temp for holding the value from sql
         checkConn();
         try {
-            ResultSet rs = Objects.requireNonNull(conn).createStatement()
-                    .executeQuery(" select * from Teachers where id = " + logged.getID()); // sql statement
-            subs = rs.getString("subjects");
-            // close query
-            rs.close(); // close statement
+//            ResultSet rs = Objects.requireNonNull(conn).createStatement()
+//                    .executeQuery(" select * from Teachers where id = " + logged.getID()); // sql statement
+//            subs = rs.getString("subjects");
+//            // close query
+//            rs.close(); // close statement
             conn.close(); // close connection
-            String[] subsArr = subs.split(" "); // split subjects (they're separated by space in database)
-            return subsArr.length; // return the length of the splitted array ( yup i just made up the word splitted)
+//            String[] subsArr = subs.split(" "); // split subjects (they're separated by space in database)
+//            return subsArr.length; // return the length of the splitted array ( yup i just made up the word splitted)
         } catch (SQLException e) {
             e.printStackTrace();
         }
