@@ -1,6 +1,7 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Student attendance system, is an attendance taking system that uses biometric captured from students to verify their identity
+Attendance taking is recorded for every student and the class room teacher gets the report of every student at the end of the year.
 
 ### What is this repository for? ###
 
